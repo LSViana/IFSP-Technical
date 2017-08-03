@@ -1,0 +1,128 @@
+package JoaoSupermarket.Model;
+import java.time.LocalDate;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
+
+public class Produto {
+	private StringProperty Nome;
+	private StringProperty Categoria;
+	private ObjectProperty<LocalDate> DataDeValidade;
+	private IntegerProperty Estoque;
+	private IntegerProperty EstoqueMinimo;
+
+	// Default constructor
+	public Produto() {
+		this("", 0, 0);
+	}
+
+	// Constructors with some initial data
+	public Produto(String Nome, int Estoque, int EstoqueMinimo) {
+		this.Nome = new SimpleStringProperty(Nome);
+		this.Estoque = new SimpleIntegerProperty(Estoque);
+		this.EstoqueMinimo = new SimpleIntegerProperty(EstoqueMinimo);
+		// The standard initial data will be "tomorrow"
+		this.DataDeValidade = new SimpleObjectProperty<LocalDate>(LocalDate.now().plusDays(1));
+		this.Categoria = new SimpleStringProperty("");
+	}
+	public Produto(String Nome, int Estoque, int EstoqueMinimo, LocalDate DataDeValidade) {
+		this.Nome = new SimpleStringProperty(Nome);
+		this.Estoque = new SimpleIntegerProperty(Estoque);
+		this.EstoqueMinimo = new SimpleIntegerProperty(EstoqueMinimo);
+		this.DataDeValidade = new SimpleObjectProperty<LocalDate>(DataDeValidade.plusDays(1));
+		this.Categoria = new SimpleObjectProperty<Categoria>(new Categoria("", ""));
+	}
+	public Produto(String Nome, int Estoque, int EstoqueMinimo, LocalDate DataDeValidade, Categoria Categoria) {
+		this.Nome = new SimpleStringProperty(Nome);
+		this.Estoque = new SimpleIntegerProperty(Estoque);
+		this.EstoqueMinimo = new SimpleIntegerProperty(EstoqueMinimo);
+		this.DataDeValidade = new SimpleObjectProperty<LocalDate>(DataDeValidade.plusDays(1));
+		this.Categoria = new SimpleObjectProperty<Categoria>(Categoria);
+	}
+
+	// Getters and Setters
+	public String getNome() {
+		return Nome.get();
+	}
+
+	public void setNome(String nome) {
+		Nome.set(nome);
+	}
+
+	public StringProperty getNomeProperty() {
+		return Nome;
+	}
+
+	public void setNomeProperty(StringProperty nome) {
+		Nome = nome;
+	}
+
+	public Categoria getCategoria() {
+		return Categoria.get();
+	}
+
+	public void setCategoria(Categoria categoria) {
+		Categoria.set(categoria);
+	}
+
+	public StringProperty getCategoriaProperty() {
+		return new SimpleStringProperty(Categoria.getValue().toString());
+	}
+
+	public void setCategoriaProperty(ObjectProperty<Categoria> categoria) {
+		Categoria = categoria;
+	}
+
+	public LocalDate getDataDeValidade() {
+		return DataDeValidade.get();
+	}
+
+	public void setDataDeValidade(LocalDate dataDeValidade) {
+		DataDeValidade.set(dataDeValidade);
+	}
+
+	public ObjectProperty<LocalDate> getDataDeValidadeProperty() {
+		return DataDeValidade;
+	}
+
+	public void setDataDeValidadeProperty(ObjectProperty<LocalDate> dataDeValidade) {
+		DataDeValidade = dataDeValidade;
+	}
+
+	public int getEstoque() {
+		return Estoque.get();
+	}
+
+	public void setEstoque(int estoque) {
+		Estoque.set(estoque);
+	}
+
+	public IntegerProperty getEstoqueProperty() {
+		return Estoque;
+	}
+
+	public void setEstoqueProperty(IntegerProperty estoque) {
+		Estoque = estoque;
+	}
+
+	public int getEstoqueMinimo() {
+		return EstoqueMinimo.get();
+	}
+
+	public void setEstoqueMinimo(int estoqueMinimo) {
+		EstoqueMinimo.set(estoqueMinimo);
+	}
+
+	public IntegerProperty getEstoqueMinimoProperty() {
+		return EstoqueMinimo;
+	}
+
+	public void setEstoqueMinimoProperty(IntegerProperty estoqueMinimo) {
+		EstoqueMinimo = estoqueMinimo;
+	}
+}

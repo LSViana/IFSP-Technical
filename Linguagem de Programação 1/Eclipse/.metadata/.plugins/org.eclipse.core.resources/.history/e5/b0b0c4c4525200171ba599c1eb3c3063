@@ -1,0 +1,45 @@
+package JoaoSupermarket.View;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import JoaoSupermarket.MainApp;
+import JoaoSupermarket.Model.*;
+
+public class WelcomeOverviewController {
+	// TableView
+	@FXML
+	private TableView<Produto> produtoTabela;
+	@FXML
+	private TableColumn<Produto, String> produtoColuna;
+	@FXML
+	private TableColumn<Produto, String> categoriaColuna;
+	// GridPane
+	@FXML
+	private Label produtoRotulo;
+	@FXML
+	private Label categoriaRotulo;
+	@FXML
+	private Label dataDeValidadeRotulo;
+	@FXML
+	private Label estoqueAtualRotulo;
+	@FXML
+	private Label estoqueMinimoAtualRotulo;
+	// Reference to the Main Application
+	private MainApp mainApp;
+	// A standard constructor that is called before the initialize()
+	public WelcomeOverviewController() {
+		// Nothing here
+	}
+	/*
+	 * Method to initialize the Controller class. This method is automatically called
+	 * after the FXML file has been loaded.
+	 */
+	@FXML
+	private void initialize() {
+		// Initialize the Produto table with two columns
+		produtoColuna.setCellValueFactory(cellData -> cellData.getValue().getNomeProperty());
+		categoriaColuna.setCellValueFactory(cellData -> cellData.getValue().getCategoriaProperty());
+	}
+}

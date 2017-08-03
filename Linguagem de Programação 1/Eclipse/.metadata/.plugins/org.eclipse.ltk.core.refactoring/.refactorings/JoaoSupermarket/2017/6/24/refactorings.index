@@ -1,0 +1,28 @@
+1497587290184	Move files
+1497587312755	Delete element
+1497587314832	Delete element
+1497587536473	Delete element
+1497588586387	Rename local variable 'Categoria'
+1497588593566	Rename local variable 'Nome'
+1497588797169	Rename local variable 'estoque'
+1497660266346	Rename method 'showPersonOverview'
+1497669485782	Rename local variable 'newValue'
+1497669499821	Rename local variable 'oldValue'
+1497669511397	Rename local variable 'observable'
+1497705781570	Rename local variable 'errorMessage'
+1497709175911	Delete element
+1497709491891	Rename local variable 'editProduto'
+1497710217875	Delete element
+1497711536360	Delete element
+1497712066645	Delete element
+1497712269143	Delete element
+1497712687560	Rename field 'produtoCampo'
+1497712693364	Rename field 'categoriaCampo'
+1497712701932	Rename field 'dataDeValidadeCampo'
+1497712706677	Rename field 'estoqueAtualCampo'
+1497712711953	Rename field 'estoqueMinimoAtualCampo'
+1497715168778	Rename method 'setPersonFilePath'
+1497716225272	Rename method 'getPersonFilePath'
+1497718435415	Rename type 'ProdutoListaEmbrulho'
+1497721872960	Rename local variable 'welcomeOverview'
+1497721882720	Rename type 'WelcomeOverviewController'

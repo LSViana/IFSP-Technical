@@ -1,0 +1,70 @@
+package JoaoSupermarket.View;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import JoaoSupermarket.MainApp;
+import JoaoSupermarket.Model.*;
+
+public class WelcomeOverviewController {
+	// TableView
+	@FXML
+	private TableView<Produto> produtoTabela;
+	@FXML
+	private TableColumn<Produto, String> produtoColuna;
+	@FXML
+	private TableColumn<Produto, String> categoriaColuna;
+	// GridPane
+	@FXML
+	private Label produtoRotulo;
+	@FXML
+	private Label categoriaRotulo;
+	@FXML
+	private Label dataDeValidadeRotulo;
+	@FXML
+	private Label estoqueAtualRotulo;
+	@FXML
+	private Label estoqueMinimoAtualRotulo;
+	// Reference to the Main Application
+	private MainApp mainApp;
+	// A standard constructor that is called before the initialize()
+	public WelcomeOverviewController() {
+		// Nothing here
+	}
+	/*
+	 * Method to initialize the Controller class. This method is automatically called
+	 * after the FXML file has been loaded.
+	 */
+	@FXML
+	private void initialize() {
+		// Initialize the Produto table with two columns
+		produtoColuna.setCellValueFactory(cellData -> cellData.getValue().getNomeProperty());
+		categoriaColuna.setCellValueFactory(cellData -> cellData.getValue().getCategoriaProperty());
+	}
+	/*
+	 * It's called by the main application to give back a reference to itself
+	 */
+	public void setMainApp(MainApp mainApp) {
+		this.mainApp = mainApp;
+		// Add ObservableList data to the TableView
+		produtoTabela.setItems(mainApp.getProdutosDados());
+	}
+
+	/*
+	 * Fills all text fields to show details about a Product
+	 * If the Product passed as argument is null, all labels are cleared
+	 */
+	public void mostrarDetalhesProduto(Produto produto) {
+		if(produto != null) {
+			produtoRotulo.setText(produto.getNome());
+			categoriaRotulo.setText(produto.getCategoria().toString());
+			dataDeValidadeRotulo.setText(produto.getDataDeValidade().toString());
+			estoqueAtualRotulo.setText(Integer.toString(produto.getEstoque()));
+			estoqueMinimoAtualRotulo.setText(Integer.toString(produto.getEstoqueMinimo()));
+		}
+		else {
+
+		}
+	}
+}

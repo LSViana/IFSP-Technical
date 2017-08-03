@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="303.0" minWidth="600.0" pickOnBounds="false" prefHeight="343.0" prefWidth="765.0" snapToPixel="false" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JoaoSupermarket.View.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gerenciarNovo" text="Novo" />
+              <MenuItem mnemonicParsing="false" onAction="#gerenciarAbrir" text="Abrir..." />
+                  <MenuItem mnemonicParsing="false" onAction="#gerenciarSalvar" text="Salvar" />
+                  <MenuItem mnemonicParsing="false" onAction="#gerenciarSalvarComo" text="Salvar Como..." />
+                  <MenuItem mnemonicParsing="false" onAction="#gerenciarFechar" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar" visible="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#gerenciarSobre" text="Sobre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

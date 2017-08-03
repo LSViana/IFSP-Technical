@@ -1,0 +1,139 @@
+package JoaoSupermarket.View;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import JoaoSupermarket.Model.Produto;
+import JoaoSupermarket.Util.DateUtil;
+
+public class ProductEditDialogController {
+	@FXML
+	private TextField produtoField;
+	@FXML
+	private TextField categoriaField;
+	@FXML
+	private TextField dataDeValidField;
+	@FXML
+	private TextField estoqueField;
+	@FXML
+	private TextField estoqueMinField;
+
+	private Stage dialogStage;
+	private Produto produto;
+	private boolean clicouOK = false;
+
+	// This method is automatically called after the FXML has been loaded
+	@FXML
+	private void initialize() {
+	}
+
+	// Set the Stage of this dialog
+	public void setDialogStage(Stage dialogStage) {
+		this.dialogStage = dialogStage;
+	}
+
+	// Set the Produto to be edited on the dialog
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+		if(produto.getNome().length() == 0)
+			produtoField.setText("");
+		else
+			produtoField.setText(produto.getNome());
+		produtoField.setPromptText("Nome do Produto");
+		categoriaField.setText(produto.getCategoria());
+		categoriaField.setPromptText("Categoria do Produto");
+		estoqueField.setText(Integer.toString(produto.getEstoque()));
+		estoqueMinField.setText(Integer.toString(produto.getEstoqueMinimo()));
+		dataDeValidField.setText(DateUtil.format(produto.getDataDeValidade()));
+		dataDeValidField.setPromptText("dd/mm/yyyy");
+	}
+
+	// Method to verify if the user clicked OK, false otherwise
+	public boolean clicouOK() {
+		return clicouOK;
+	}
+
+	// Validate the user input in the text fields
+	private boolean isInputValid() {
+		String mensagemDeErro = "";
+		// Nome
+		if(produtoField.getText() == null || produtoField.getText().length() == 0) {
+			mensagemDeErro += "Campo de Nome do Produto está vazio!\n";
+		}
+		// Categoria
+		if(categoriaField.getText() == null || categoriaField.getText().length() == 0) {
+			mensagemDeErro += "Campo de Categoria do Produto está vazio!\n";
+		}
+		// Data de Validade
+		if(dataDeValidField.getText() == null || dataDeValidField.getText().length() == 0) {
+			mensagemDeErro += "Campo de Data de Validade do Produto está vazio!\n";
+		}
+		else if(!DateUtil.validDate(dataDeValidField.getText())) {
+				mensagemDeErro += "O valor informado no campo Data de Validade não é válido! " + DateUtil.getDate_Pattern() + "\n";
+		}
+		// Estoque
+		if(estoqueField.getText() == null || estoqueField.getText().length() == 0) {
+			mensagemDeErro += "Campo de Estoque do Produto está vazio!\n";
+		}
+		else {
+			try {
+				Integer.parseInt(estoqueField.getText());
+			}
+			catch (Exception exc) {
+				mensagemDeErro += "O valor informado no campo Estoque não é válido!\n";
+			}
+		}
+		// Estoque Mínimo
+		if(estoqueMinField.getText() == null || estoqueMinField.getText().length() == 0) {
+			mensagemDeErro += "Campo de Estoque Mínimo do Produto está vazio!\n";
+		}
+		else {
+			try {
+				Integer.parseInt(estoqueMinField.getText());
+			}
+			catch (Exception exc) {
+				mensagemDeErro += "O valor informado no campo Estoque não é válido!\n";
+			}
+		}
+		// Verifying the Error Message
+		if(mensagemDeErro.length() == 0) {
+			return true;
+		}
+		else {
+			// Show the error message
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.initOwner(dialogStage);
+			alert.setTitle("Campos inválidos!");
+			alert.setHeaderText("Por favor corrija os erros citados abaixo!");
+			alert.setContentText(mensagemDeErro);
+			// Method called to the actual exhibition
+			alert.showAndWait();
+
+			return false;
+		}
+	}
+
+	// Called when the user clicks OK
+	@FXML
+	private void gerenciarOK() {
+		if(isInputValid()) {
+			produto.setNome(produtoField.getText());
+			produto.setCategoria(categoriaField.getText());
+			produto.setDataDeValidade(DateUtil.parse(dataDeValidField.getText()));
+			produto.setEstoque(Integer.parseInt(estoqueField.getText()));
+			produto.setEstoqueMinimo(Integer.parseInt(estoqueMinField.getText()));
+
+			// Certifies the OK button is clicked
+			clicouOK = true;
+			dialogStage.close();
+		}
+	}
+
+	@FXML
+	private void gerenciarCancelar() {
+		dialogStage.close();
+	}
+}

@@ -1,0 +1,22 @@
+Requerimento
+	Nome do Aluno
+	Prontuário
+	Turma
+	Período
+	Data de Falta
+	Tipo de Ocorrência
+	Status*
+	Data de Envio*
+	Observação*
+---
+Inicial
+	Setor Discente
+		Realizar Justificativa
+	Setor Médico
+		Justificativas
+		Enviar Requerimento
+		Deferidos
+		Indeferidos
+	Setor Pedagógico
+		Deferir
+		Indeferir

@@ -1,0 +1,5 @@
+package JoaoSupermarket.Model;
+
+public class ProdutoListaEmbrulho {
+
+}
