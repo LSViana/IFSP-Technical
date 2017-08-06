@@ -1,8 +1,0 @@
-package JoaoSupermarket.Model;
-
-import java.util.List;
-import javax.xml.bind.annotation.*;
-
-public class ProdutoListaEmbrulho {
-
-}

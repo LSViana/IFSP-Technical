@@ -1,6 +1,0 @@
-package JoaoSupermarket.Model;
-public class Categoria {
-	private String Nome;
-	private String Descricao;
-
-}
