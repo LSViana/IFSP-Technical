@@ -133,7 +133,7 @@ public class MedicalRequirement {
                                 timeField.getSelectedIndex(),
                                 descriptionField.getText(),
                                 occurrenceDate,
-                                (isJustify.isSelected()) ? 0 : 1, 0, LocalDate.now(), "[Sem descrição de atestado]", "[Sem descrição de deferimento]"));
+                                (isJustify.isSelected()) ? 0 : 1, 0, LocalDate.now(), "[Sem descrição de atestado]", "[Sem descrição de indeferimento]"));
                         JOptionPane.getRootFrame().dispose();
                     }
                 } catch (Exception exc) {
