@@ -1,7 +1,6 @@
 package system.data;
 import java.util.ArrayList;
 import java.util.List;
-
 import system.business.Student;
 public class StudentData implements StudentModel {
 	
