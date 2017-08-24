@@ -1,7 +1,7 @@
 package system;
+import java.util.List;
 import java.sql.SQLException;
 import java.util.Scanner;
-
 import system.business.Student;
 import system.data.StudentDAO;
 import system.presentation.ListStudent;
@@ -18,7 +18,12 @@ public class start {
 		// Testing data class
 		StudentDAO stdDAO = new StudentDAO();
 		try {
-			stdDAO.insert(new Student("1650297", "Lucas Viana S. de Souza", "lv201122@gmail.com", "959521889"));
+			//stdDAO.insert(new Student("1650297", "Lucas Viana S. de Souza", "lv201122@gmail.com", "959521889"));
+			
+			List<Student> students = stdDAO.searchAll();
+			for (Student student : students) {
+				System.out.println(student);
+			}
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

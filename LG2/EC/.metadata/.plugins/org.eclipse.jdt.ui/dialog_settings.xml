@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="D:" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\mysql-connector-java-5.1.36-bin.jar" key="org.eclipse.jdt.ui.lastuserlibrary"/>
+	<item value="false" key="delegateUpdating"/>
+	<item value="480,510" key="UserLibraryLoadSaveDialog.size"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="renameSubpackages"/>
 		<item value="false" key="updateQualifiedNames"/>
@@ -69,6 +73,9 @@
 		<item value="false" key="FinalModifier"/>
 	</section>
 	<section name="RenameInformationPopup">
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="3" key="index"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
