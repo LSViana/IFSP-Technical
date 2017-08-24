@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="javax.accessibility.AccessibleAttributeSequence"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="system.data.StudentData"/>
+<fullyQualifiedTypeName name="system.presentation.listStudent"/>
+<fullyQualifiedTypeName name="system.start"/>
+<fullyQualifiedTypeName name="system.presentation.RegisterStudent"/>
+<fullyQualifiedTypeName name="system.service.StudentService"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="system.business.Student"/>
+<fullyQualifiedTypeName name="system.service.StudentFunctional"/>
+<fullyQualifiedTypeName name="system.presentation.ListStudent"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

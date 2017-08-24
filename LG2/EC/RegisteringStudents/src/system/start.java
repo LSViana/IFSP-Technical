@@ -1,5 +1,9 @@
 package system;
+import java.sql.SQLException;
 import java.util.Scanner;
+
+import system.business.Student;
+import system.data.StudentDAO;
 import system.presentation.ListStudent;
 import system.presentation.RegisterStudent;
 import system.service.StudentFunctional;
@@ -11,15 +15,24 @@ public class start {
 	static Scanner scanner;
 	//
 	public static void main(String[] args) {
-		scanner = new Scanner(System.in); 
-		// Create the Service Layer
-		service = new StudentService();
-		// Create the windows instances
-		listStudent = new ListStudent(service);
-		registerStudent = new RegisterStudent(service);
-		// Show the menu to the user
-		System.out.println("\tWelcome to our Student register and managing system!");
-		while(showMenu());
+		// Testing data class
+		StudentDAO stdDAO = new StudentDAO();
+		try {
+			stdDAO.insert(new Student("1650297", "Lucas Viana S. de Souza", "lv201122@gmail.com", "959521889"));
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// Common flow
+//		scanner = new Scanner(System.in); 
+//		// Create the Service Layer
+//		service = new StudentService();
+//		// Create the windows instances
+//		listStudent = new ListStudent(service);
+//		registerStudent = new RegisterStudent(service);
+//		// Show the menu to the user
+//		System.out.println("\tWelcome to our Student register and managing system!");
+//		while(showMenu());
 	}
 	
 	public static boolean showMenu() {
