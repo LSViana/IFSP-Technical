@@ -1,7 +1,6 @@
 package school.control;
 import java.sql.SQLException;
 import java.util.List;
-
 import school.model.Student;
 public class StudentControl {
 	public Student insert(Student student) throws ClassNotFoundException, SQLException {
@@ -10,5 +9,8 @@ public class StudentControl {
 	}
 	public List<Student> searchAll() throws ClassNotFoundException, SQLException {
 		return StudentDAO.searchAll();
+	}
+	public List<Student> searchByEnrollment(String enrollment) throws ClassNotFoundException, SQLException {
+		return StudentDAO.searchByEnrollment(enrollment);
 	}
 }

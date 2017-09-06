@@ -31,7 +31,22 @@ public class StudentDAO {
 		prepStatement = _connection.prepareStatement(statement);
 		ResultSet rs = prepStatement.executeQuery();
 		while(rs.next()) {
-			results.add(new Student(rs.getString(0), rs.getString(1), rs.getInt(2)));
+			results.add(new Student(rs.getString(1), rs.getString(2), rs.getInt(3)));
+		}
+		//
+		DbConnection.closeConnection(_connection);
+		return results;
+	}
+	public static List<Student> searchByEnrollment(String enrollment) throws ClassNotFoundException, SQLException {
+		List<Student> results = new ArrayList<>();
+		_connection = DbConnection.openConnection();
+		//
+		String statement = "SELECT * FROM Student WHERE enrollment LIKE '%" + enrollment + "%'";
+		prepStatement = _connection.prepareStatement(statement);
+		//prepStatement.setString(1, enrollment);
+		ResultSet rs = prepStatement.executeQuery();
+		while(rs.next()) {
+			results.add(new Student(rs.getString(1), rs.getString(2), rs.getInt(3)));
 		}
 		//
 		DbConnection.closeConnection(_connection);

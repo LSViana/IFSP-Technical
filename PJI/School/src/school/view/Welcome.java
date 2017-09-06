@@ -9,10 +9,12 @@ import school.control.StudentControl;
 
 public class Welcome {
 	private static Register register;
+	private static Search search;
 	private static StudentControl studentControl;
 	public Welcome(StudentControl studentControl) {
 		this.studentControl = studentControl;
 		register = new Register(studentControl);
+		search = new Search(studentControl);
 	}
 	
 	public void show() throws ParseException, ClassNotFoundException, SQLException {
@@ -28,7 +30,7 @@ public class Welcome {
 			register.show();
 			break;
 		case 1:
-			System.out.println("search");
+			search.show();
 			break;
 		}
 		} while(choice != -1 && choice != 2);
