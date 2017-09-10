@@ -1,14 +1,19 @@
 package System.Business;
+import java.lang.reflect.Field;
 import java.time.LocalDate;
-public class Class implements EntityModel {
-    private int Id;
-    private int IdDiscipline;
-    private int Day;
-    private int IdInitialTime;
-    private int IdFinalTime;
+public class Class extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer Id;
+    private Integer IdDiscipline;
+    private Integer Day;
+    private Integer IdInitialTime;
+    private Integer IdFinalTime;
     private LocalDate InitialDate;
     private LocalDate EndDate;
-    public Class(int Id, int IdDiscipline, int Day, int IdInitialTime, int IdFinalTime, LocalDate InitialDate, LocalDate EndDate) {
+    public Class(Integer Id, Integer IdDiscipline, Integer Day, Integer IdInitialTime, Integer IdFinalTime, LocalDate InitialDate, LocalDate EndDate) {
         this.Id = Id;
         this.IdDiscipline = IdDiscipline;
         this.Day = Day;
@@ -18,38 +23,38 @@ public class Class implements EntityModel {
         this.EndDate = EndDate;
     }
     @Override
-    public int[] getIds() {
-        return new int[] { Id };
+    public Integer[] getIds() {
+        return new Integer[] { Id };
     }
     
-    public int getId() {
+    public Integer getId() {
         return Id;
     }
-    public void setId(int Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
-    public int getIdDiscipline() {
+    public Integer getIdDiscipline() {
         return IdDiscipline;
     }
-    public void setIdDiscipline(int IdDiscipline) {
+    public void setIdDiscipline(Integer IdDiscipline) {
         this.IdDiscipline = IdDiscipline;
     }
-    public int getDay() {
+    public Integer getDay() {
         return Day;
     }
-    public void setDay(int Day) {
+    public void setDay(Integer Day) {
         this.Day = Day;
     }
-    public int getIdInitialTime() {
+    public Integer getIdInitialTime() {
         return IdInitialTime;
     }
-    public void setIdInitialTime(int IdInitialTime) {
+    public void setIdInitialTime(Integer IdInitialTime) {
         this.IdInitialTime = IdInitialTime;
     }
-    public int getIdFinalTime() {
+    public Integer getIdFinalTime() {
         return IdFinalTime;
     }
-    public void setIdFinalTime(int IdFinalTime) {
+    public void setIdFinalTime(Integer IdFinalTime) {
         this.IdFinalTime = IdFinalTime;
     }
     public LocalDate getInitialDate() {

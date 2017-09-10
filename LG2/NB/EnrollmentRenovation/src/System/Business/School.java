@@ -1,26 +1,31 @@
 package System.Business;
-public class School implements EntityModel {
-    private int Id;
-    private int IdCity;
-    public School(int Id, int IdCity) {
+import java.lang.reflect.Field;
+public class School extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer Id;
+    private Integer IdCity;
+    public School(Integer Id, Integer IdCity) {
         this.Id = Id;
         this.IdCity = IdCity;
     }
     @Override
-    public int[] getIds() {
-        return new int[] { Id };
+    public Integer[] getIds() {
+        return new Integer[] { Id };
     }
     
-    public int getId() {
+    public Integer getId() {
         return Id;
     }
-    public void setId(int Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
-    public int getIdCity() {
+    public Integer getIdCity() {
         return IdCity;
     }
-    public void setIdCity(int IdCity) {
+    public void setIdCity(Integer IdCity) {
         this.IdCity = IdCity;
     }
 }

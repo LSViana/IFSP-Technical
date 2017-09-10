@@ -1,26 +1,31 @@
 package System.Business;
-public class Restriction implements EntityModel {
-    private int IdRequired;
-    private int IdProvided;
-    public Restriction(int IdRequired, int IdProvided) {
+import java.lang.reflect.Field;
+public class Restriction extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer IdRequired;
+    private Integer IdProvided;
+    public Restriction(Integer IdRequired, Integer IdProvided) {
         this.IdRequired = IdRequired;
         this.IdProvided = IdProvided;
     }
-    public int getIdRequired() {
+    public Integer getIdRequired() {
         return IdRequired;
     }
-    public void setIdRequired(int IdRequired) {
+    public void setIdRequired(Integer IdRequired) {
         this.IdRequired = IdRequired;
     }
-    public int getIdProvided() {
+    public Integer getIdProvided() {
         return IdProvided;
     }
-    public void setIdProvided(int IdProvided) {
+    public void setIdProvided(Integer IdProvided) {
         this.IdProvided = IdProvided;
     }
 
     @Override
-    public int[] getIds() {
-        return new int[] { IdRequired, IdProvided };
+    public Integer[] getIds() {
+        return new Integer[] { IdRequired, IdProvided };
     }
 }

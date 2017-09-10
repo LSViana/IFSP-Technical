@@ -1,15 +1,23 @@
 package System.Business;
+import java.lang.reflect.Field;
 import java.time.LocalDate;
-public class User implements EntityModel {
-    private int Id;
+public class User extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer Id;
     private String FirstName;
     private String LastName;
     private LocalDate Birthday;
     private String User;
     private String Password;
-    private int IdState;
-    private int Type;
-    public User(int Id, String FirstName, String LastName, LocalDate Birthday, String User, String Password, int IdState, int Type) {
+    private Integer IdState;
+    private Integer Type;
+    private User() {
+        // Standard constructor
+    }
+    public User(Integer Id, String FirstName, String LastName, LocalDate Birthday, String User, String Password, Integer IdState, Integer Type) {
         this.Id = Id;
         this.FirstName = FirstName;
         this.LastName = LastName;
@@ -20,14 +28,14 @@ public class User implements EntityModel {
         this.Type = Type;
     }
     @Override
-    public int[] getIds() {
-        return new int[] { Id };
+    public Integer[] getIds() {
+        return new Integer[] { Id };
     }
     
-    public int getId() {
+    public Integer getId() {
         return Id;
     }
-    public void setId(int Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
     public String getFirstName() {
@@ -60,16 +68,16 @@ public class User implements EntityModel {
     public void setPassword(String Password) {
         this.Password = Password;
     }
-    public int getIdState() {
+    public Integer getIdState() {
         return IdState;
     }
-    public void setIdState(int IdState) {
+    public void setIdState(Integer IdState) {
         this.IdState = IdState;
     }
-    public int getType() {
+    public Integer getType() {
         return Type;
     }
-    public void setType(int Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }   
 }

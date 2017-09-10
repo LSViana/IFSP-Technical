@@ -1,22 +1,27 @@
 package System.Business;
-public class City implements EntityModel {
-    private int Id;
+import java.lang.reflect.Field;
+public class City extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer Id;
     private String Name;
-    private int IdState;
-    public City(int Id, String Name, int IdState) {
+    private Integer IdState;
+    public City(Integer Id, String Name, Integer IdState) {
         this.Id = Id;
         this.Name = Name;
         this.IdState = IdState;
     }
     @Override
-    public int[] getIds() {
-        return new int[] { Id };
+    public Integer[] getIds() {
+        return new Integer[] { Id };
     }
     
-    public int getId() {
+    public Integer getId() {
         return Id;
     }
-    public void setId(int Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
     public String getName() {
@@ -25,10 +30,10 @@ public class City implements EntityModel {
     public void setName(String Name) {
         this.Name = Name;
     }
-    public int getIdState() {
+    public Integer getIdState() {
         return IdState;
     }
-    public void setIdState(int IdState) {
+    public void setIdState(Integer IdState) {
         this.IdState = IdState;
     }
 }

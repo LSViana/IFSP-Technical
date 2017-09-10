@@ -1,20 +1,25 @@
 package System.Business;
-public class Discipline implements EntityModel {
-    private int Id;
+import java.lang.reflect.Field;
+public class Discipline extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer Id;
     private String Name;
-    public Discipline(int Id, String Name) {
+    public Discipline(Integer Id, String Name) {
         this.Id = Id;
         this.Name = Name;
     }
     @Override
-    public int[] getIds() {
-        return new int[] { Id };
+    public Integer[] getIds() {
+        return new Integer[] { Id };
     }
     
-    public int getId() {
+    public Integer getId() {
         return Id;
     }
-    public void setId(int Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
     public String getName() {

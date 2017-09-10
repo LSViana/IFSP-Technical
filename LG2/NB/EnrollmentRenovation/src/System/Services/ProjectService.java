@@ -2,129 +2,152 @@ package System.Services;
 import System.Business.*;
 import System.Data.*;
 import System.Business.Class;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 public class ProjectService {
-    private EntityData<City> cities;
-    private EntityData<Class> classes;
-    private EntityData<Course> courses;
-    private EntityData<CourseStructure> courseStructures;
-    private EntityData<Credits> credits;
-    private EntityData<Discipline> disciplines;
-    private EntityData<Enrollment> enrollments;
-    private EntityData<Restriction> restrictions;
-    private EntityData<School> schools;
-    private EntityData<State> states;
-    private EntityData<Time> times;
-    private EntityData<User> users;
+    static {
+        for(java.lang.reflect.Field f : ProjectService.class.getDeclaredFields()) {
+            try {
+                java.lang.Class.forName("System.Business." + f.getName());
+            } catch (Exception ex) {
+               // Sem Tratamento Disponível
+            }
+        }
+    }
+    
+    private EntityData<City> City;
+    private EntityData<Class> Class;
+    private EntityData<Course> Course;
+    private EntityData<CourseStructure> CourseStructure;
+    private EntityData<Credits> Credits;
+    private EntityData<Discipline> Discipline;
+    private EntityData<Enrollment> Enrollment;
+    private EntityData<Restriction> Restriction;
+    private EntityData<School> School;
+    private EntityData<State> State;
+    private EntityData<Time> Time;
+    private EntityData<User> User;
 
-    public ProjectService(/*EntityData<City> cities, EntityData<Business.Class> classes, EntityData<Course> courses, EntityData<CourseStructure> courseStructures, EntityData<Credits> credits, EntityData<Discipline> disciplines, EntityData<Enrollment> enrollments, EntityData<Restriction> restrictions, EntityData<School> schools, EntityData<State> states, EntityData<Time> times, EntityData<User> users*/) {
-        this.cities = new EntityData();
-        this.classes = new EntityData();
-        this.courses = new EntityData();
-        this.courseStructures = new EntityData();
-        this.credits = new EntityData();
-        this.disciplines = new EntityData();
-        this.enrollments = new EntityData();
-        this.restrictions = new EntityData();
-        this.schools = new EntityData();
-        this.states = new EntityData();
-        this.times = new EntityData();
-        this.users = new EntityData();
+    public ProjectService(/*EntityData<City> City,
+    EntityData<Business.Class> Class,
+    EntityData<Course> Course,
+    EntityData<CourseStructure> CourseStructure,
+    ntityData<Credits> Credit,
+    EntityData<Discipline> Discipline,
+    EntityData<Enrollment> Enrollment,
+    EntityData<Restriction> Restriction,
+    ntityData<School> School,
+    EntityData<State> State,
+    ntityData<Time> Time,
+    ntityData<User> User*/) throws Exception {
+        this.City = new EntityData(City.class);
+        this.Class = new EntityData(Class.class);
+        this.Course = new EntityData(Course.class);
+        this.CourseStructure = new EntityData(CourseStructure.class);
+        this.Credits = new EntityData(Credits.class);
+        this.Discipline = new EntityData(Discipline.class);
+        this.Enrollment = new EntityData(Enrollment.class);
+        this.Restriction = new EntityData(Restriction.class);
+        this.School = new EntityData(School.class);
+        this.State = new EntityData(State.class);
+        this.Time = new EntityData(Time.class);
+        this.User = new EntityData(User.class);
     }
 
     public EntityData<City> getCities() {
-        return cities;
+        return City;
     }
 
     public void setCities(EntityData<City> cities) {
-        this.cities = cities;
+        this.City = cities;
     }
 
     public EntityData<Class> getClasses() {
-        return classes;
+        return Class;
     }
 
     public void setClasses(EntityData<Class> classes) {
-        this.classes = classes;
+        this.Class = classes;
     }
 
     public EntityData<Course> getCourses() {
-        return courses;
+        return Course;
     }
 
     public void setCourses(EntityData<Course> courses) {
-        this.courses = courses;
+        this.Course = courses;
     }
 
     public EntityData<CourseStructure> getCourseStructures() {
-        return courseStructures;
+        return CourseStructure;
     }
 
     public void setCourseStructures(EntityData<CourseStructure> courseStructures) {
-        this.courseStructures = courseStructures;
+        this.CourseStructure = courseStructures;
     }
 
     public EntityData<Credits> getCredits() {
-        return credits;
+        return Credits;
     }
 
     public void setCredits(EntityData<Credits> credits) {
-        this.credits = credits;
+        this.Credits = credits;
     }
 
     public EntityData<Discipline> getDisciplines() {
-        return disciplines;
+        return Discipline;
     }
 
     public void setDisciplines(EntityData<Discipline> disciplines) {
-        this.disciplines = disciplines;
+        this.Discipline = disciplines;
     }
 
     public EntityData<Enrollment> getEnrollments() {
-        return enrollments;
+        return Enrollment;
     }
 
     public void setEnrollments(EntityData<Enrollment> enrollments) {
-        this.enrollments = enrollments;
+        this.Enrollment = enrollments;
     }
 
     public EntityData<Restriction> getRestrictions() {
-        return restrictions;
+        return Restriction;
     }
 
     public void setRestrictions(EntityData<Restriction> restrictions) {
-        this.restrictions = restrictions;
+        this.Restriction = restrictions;
     }
 
     public EntityData<School> getSchools() {
-        return schools;
+        return School;
     }
 
     public void setSchools(EntityData<School> schools) {
-        this.schools = schools;
+        this.School = schools;
     }
 
     public EntityData<State> getStates() {
-        return states;
+        return State;
     }
 
     public void setStates(EntityData<State> states) {
-        this.states = states;
+        this.State = states;
     }
 
     public EntityData<Time> getTimes() {
-        return times;
+        return Time;
     }
 
     public void setTimes(EntityData<Time> times) {
-        this.times = times;
+        this.Time = times;
     }
 
     public EntityData<User> getUsers() {
-        return users;
+        return User;
     }
 
     public void setUsers(EntityData<User> users) {
-        this.users = users;
+        this.User = users;
     }
     
 }

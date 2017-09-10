@@ -1,22 +1,27 @@
 package System.Business;
-public class State implements EntityModel {
-    private int Id;
+import java.lang.reflect.Field;
+public class State extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer Id;
     private String Name;
     private String Initials;
-    public State(int Id, String Name, String Initials) {
+    public State(Integer Id, String Name, String Initials) {
         this.Id = Id;
         this.Name = Name;
         this.Initials = Initials;
     }
     @Override
-    public int[] getIds() {
-        return new int[] { Id };
+    public Integer[] getIds() {
+        return new Integer[] { Id };
     }
     
-    public int getId() {
+    public Integer getId() {
         return Id;
     }
-    public void setId(int Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
     public String getName() {

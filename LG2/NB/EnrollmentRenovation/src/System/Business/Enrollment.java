@@ -1,12 +1,17 @@
 package System.Business;
-public class Enrollment implements EntityModel {
-    private int IdStudent;
-    private int IdClass;
-    private int IdCourse;
-    private int Semester;
-    private int Status;
-    private double Grade;
-    public Enrollment(int IdStudent, int IdClass, int IdCourse, int Semester, int Status, double Grade) {
+import java.lang.reflect.Field;
+public class Enrollment extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer IdStudent;
+    private Integer IdClass;
+    private Integer IdCourse;
+    private Integer Semester;
+    private Integer Status;
+    private Double Grade;
+    public Enrollment(Integer IdStudent, Integer IdClass, Integer IdCourse, Integer Semester, Integer Status, Double Grade) {
         this.IdStudent = IdStudent;
         this.IdClass = IdClass;
         this.IdCourse = IdCourse;
@@ -14,45 +19,45 @@ public class Enrollment implements EntityModel {
         this.Status = Status;
         this.Grade = Grade;
     }
-    public int getIdStudent() {
+    public Integer getIdStudent() {
         return IdStudent;
     }
-    public void setIdStudent(int IdStudent) {
+    public void setIdStudent(Integer IdStudent) {
         this.IdStudent = IdStudent;
     }
-    public int getIdClass() {
+    public Integer getIdClass() {
         return IdClass;
     }
-    public void setIdClass(int IdClass) {
+    public void setIdClass(Integer IdClass) {
         this.IdClass = IdClass;
     }
-    public int getIdCourse() {
+    public Integer getIdCourse() {
         return IdCourse;
     }
-    public void setIdCourse(int IdCourse) {
+    public void setIdCourse(Integer IdCourse) {
         this.IdCourse = IdCourse;
     }
-    public int getSemester() {
+    public Integer getSemester() {
         return Semester;
     }
-    public void setSemester(int Semester) {
+    public void setSemester(Integer Semester) {
         this.Semester = Semester;
     }
-    public int getStatus() {
+    public Integer getStatus() {
         return Status;
     }
-    public void setStatus(int Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
-    public double getGrade() {
+    public Double getGrade() {
         return Grade;
     }
-    public void setGrade(double Grade) {
+    public void setGrade(Double Grade) {
         this.Grade = Grade;
     }    
 
     @Override
-    public int[] getIds() {
-        return new int[] { IdStudent, IdClass, IdCourse };
+    public Integer[] getIds() {
+        return new Integer[] { IdStudent, IdClass, IdCourse };
     }
 }

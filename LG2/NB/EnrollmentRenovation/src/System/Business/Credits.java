@@ -1,32 +1,37 @@
 package System.Business;
+import java.lang.reflect.Field;
 import java.time.LocalDate;
-public class Credits implements EntityModel {
-    private int IdStudent;
-    private int IdDiscipline;
-    private int IdCourse;
+public class Credits extends EntityModel {
+    static {
+        ClassName = City.class.getCanonicalName();
+        Fields = City.class.getDeclaredFields();
+    }
+    private Integer IdStudent;
+    private Integer IdDiscipline;
+    private Integer IdCourse;
     private LocalDate DateRequirement;
-    public Credits(int IdStudent, int IdDiscipline, int IdCourse, LocalDate DateRequirement) {
+    public Credits(Integer IdStudent, Integer IdDiscipline, Integer IdCourse, LocalDate DateRequirement) {
         this.IdStudent = IdStudent;
         this.IdDiscipline = IdDiscipline;
         this.IdCourse = IdCourse;
         this.DateRequirement = DateRequirement;
     }
-    public int getIdStudent() {
+    public Integer getIdStudent() {
         return IdStudent;
     }
-    public void setIdStudent(int IdStudent) {
+    public void setIdStudent(Integer IdStudent) {
         this.IdStudent = IdStudent;
     }
-    public int getIdDiscipline() {
+    public Integer getIdDiscipline() {
         return IdDiscipline;
     }
-    public void setIdDiscipline(int IdDiscipline) {
+    public void setIdDiscipline(Integer IdDiscipline) {
         this.IdDiscipline = IdDiscipline;
     }
-    public int getIdCourse() {
+    public Integer getIdCourse() {
         return IdCourse;
     }
-    public void setIdCourse(int IdCourse) {
+    public void setIdCourse(Integer IdCourse) {
         this.IdCourse = IdCourse;
     }
     public LocalDate getDateRequirement() {
@@ -37,7 +42,7 @@ public class Credits implements EntityModel {
     }
 
     @Override
-    public int[] getIds() {
-        return new int[] { IdStudent, IdDiscipline, IdCourse };
+    public Integer[] getIds() {
+        return new Integer[] { IdStudent, IdDiscipline, IdCourse };
     }
 }
