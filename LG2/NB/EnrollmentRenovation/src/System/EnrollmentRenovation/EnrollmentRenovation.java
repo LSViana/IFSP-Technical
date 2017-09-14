@@ -15,7 +15,5 @@ public class EnrollmentRenovation {
     private static void initializeService() throws Exception {
         service = new ProjectService();
         List<State> st = service.getStates().getAll();
-        for(State s : st)
-            System.out.println(s.getName());
     }
 }
