@@ -20,6 +20,7 @@ public class CourseService implements CourseFunctional {
         Course result = new Course(Id, Name, IdSchool);
         try {
             dao.insert(result);
+            result.setId(dao.get(result.getName()).getId());
         } catch (Exception ex) {
             Logger.getLogger(CourseService.class.getName()).log(Level.SEVERE, null, ex);
         }

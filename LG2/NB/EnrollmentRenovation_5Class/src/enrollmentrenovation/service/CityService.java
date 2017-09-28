@@ -20,6 +20,7 @@ public class CityService implements CityFunctional {
         City result = new City(Id, Name, IdState);
         try {
             dao.insert(result);
+            result.setId(dao.get(Name).getId());
         } catch (Exception ex) {
             Logger.getLogger(CityService.class.getName()).log(Level.SEVERE, null, ex);
         }

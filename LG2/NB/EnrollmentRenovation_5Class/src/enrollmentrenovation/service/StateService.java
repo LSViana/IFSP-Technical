@@ -19,6 +19,7 @@ public class StateService implements StateFunctional {
         State result = new State(Id, Name, Initials);
         try {
             dao.insert(result);
+            result.setId(dao.get(result.getName()).getId());
         } catch (Exception ex) {
             Logger.getLogger(StateService.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -21,6 +21,7 @@ public class TimeService implements TimeFunctional {
         Time result = new Time(Id, Time);
         try {
             dao.insert(result);
+            result.setId(dao.get(result.getTime().toString()).getId());
         } catch (Exception ex) {
             Logger.getLogger(TimeService.class.getName()).log(Level.SEVERE, null, ex);
         }

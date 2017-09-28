@@ -1,10 +1,13 @@
 package enrollmentrenovation.business;
 
+import java.util.List;
+
 public class State {
 
     private int Id;
     private String Name;
     private String Initials;
+    private List<City> Cities;
 
     public State(int Id, String Name, String Initials) {
         this.Id = Id;
