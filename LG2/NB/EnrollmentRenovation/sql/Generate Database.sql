@@ -42,11 +42,10 @@ create table course (
 );
 
 create table user (
-	id int primary key auto_increment,
+	id char(7) primary key,
 	firstname varchar(64) not null,
 	lastname varchar(64) not null,
 	birthday date not null,
-	`user` varchar(64) not null,
 	`password` varchar(64) not null,
 	idstate int not null,
 	type int not null,
@@ -54,7 +53,7 @@ create table user (
 );
 
 create table credits (
-	idstudent int not null,
+	idstudent char(7) not null,
 	iddiscipline int not null,
 	idcourse int not null,
 	daterequeriment date not null,
@@ -69,8 +68,10 @@ create table coursestructure (
 	iddiscipline int,
 	semester tinyint,
 	facultative bit,
-	constraint primary key(idcourse, iddiscipline),
+	constraint primary key(idcourse, iddiscipline)
+	on delete cascade,
 	constraint foreign key(idcourse) references course(id)
+	on delete cascade
 );
 
 create table `time` (
@@ -92,7 +93,7 @@ create table class (
 );
 
 create table enrollment (
-	idstudent int not null,
+	idstudent char(7) not null,
 	idclass int not null,
 	idcourse int not null,
 	semester tinyint not null,

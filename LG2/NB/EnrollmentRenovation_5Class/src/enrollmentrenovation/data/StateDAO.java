@@ -1,18 +1,22 @@
 package enrollmentrenovation.data;
+
 import enrollmentrenovation.business.State;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StateDAO implements EntityModel<State>{
-    
- private java.sql.Connection connection;
+public class StateDAO implements EntityModel<State> {
+
+    private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM State;";
     private String SQL_GET = "SELECT * FROM State WHERE Name = ?;";
     private String SQL_GETINDEX = "SELECT * FROM State LIMIT ?,1;";
     private String SQL_FILTER = "SELECT * FROM State WHERE Name LIKE ?;";
     private String SQL_INSERT = "INSERT INTO State VALUES(?, ?, ?);";
+    private String SQL_DELETE = "DELETE FROM State WHERE Name = ?;";
+    private String SQL_UPDATE = "UPDATE State SET Name = ?, Initials = ? WHERE Id = ?;";
 
     @Override
     public List<State> getAll() throws Exception {
@@ -35,7 +39,7 @@ public class StateDAO implements EntityModel<State>{
         ResultSet rs = ps.executeQuery();
         try {
             return new State(rs.getInt(1), rs.getString(2), rs.getString(3));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
         } finally {
             Connection.closeConnection(connection);
@@ -51,10 +55,9 @@ public class StateDAO implements EntityModel<State>{
         try {
             rs.next();
             return new State(rs.getInt(1), rs.getString(2), rs.getString(3));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
-        }
-        finally {
+        } finally {
             Connection.closeConnection(connection);
         }
     }
@@ -92,7 +95,7 @@ public class StateDAO implements EntityModel<State>{
     public boolean insertRange(List<State> objects) throws Exception {
         try {
             connection = Connection.openConnection();
-            for (State object : objects) {                
+            for (State object : objects) {
                 PreparedStatement ps = connection.prepareStatement(SQL_INSERT);
                 ps.setInt(1, 0);
                 ps.setString(2, object.getName());
@@ -108,8 +111,27 @@ public class StateDAO implements EntityModel<State>{
 
     @Override
     public boolean exists(String filter) throws Exception {
-        if(get(filter) != null)
+        if (get(filter) != null) {
             return true;
+        }
         return false;
+    }
+
+    @Override
+    public void delete(String name) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
+    }
+    
+    public void update(int id, String name, String initials) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
+        ps.setString(1, name);
+        ps.setString(2, initials);
+        ps.setInt(3, id);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
     }
 }

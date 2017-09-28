@@ -6,6 +6,7 @@ import java.lang.reflect.ParameterizedType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -117,12 +118,14 @@ public class EntityData<T extends EntityModel> {
         T _result = activator();
         while (_rs.next()) {
             for (int i = 0; i < _fields.length; i++) {
-                java.lang.reflect.Field f = _fields[i];
+                java.lang.reflect.Field f =  _fields[i];
                 java.lang.reflect.Method m = _class.getMethod("set" + f.getName(), f.getType());
                 if (f.getType().isInstance(0)) {
                     m.invoke(_result, _rs.getInt(i + 1));
                 } else if (f.getType().isInstance(false)) {
                     m.invoke(_result, _rs.getBoolean(i + 1));
+                } else if (f.getType().getName().contains("LocalDate")) {
+                    m.invoke(_result, LocalDate.parse(_rs.getString(i + 1)));
                 } else {
                     m.invoke(_result, _rs.getObject(i + 1));
                 }

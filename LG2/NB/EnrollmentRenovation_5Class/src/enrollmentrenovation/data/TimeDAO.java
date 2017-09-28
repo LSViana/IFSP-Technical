@@ -3,12 +3,13 @@ package enrollmentrenovation.data;
 import enrollmentrenovation.business.Time;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.SQLType;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimeDAO implements EntityModel<Time> {
+public class TimeDAO implements EntityModel<Time>, TimeModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM Time;";
@@ -16,6 +17,8 @@ public class TimeDAO implements EntityModel<Time> {
     private String SQL_GETINDEX = "SELECT * FROM Time LIMIT ?,1;";
     private String SQL_FILTER = "SELECT * FROM Time WHERE Time LIKE ?;";
     private String SQL_INSERT = "INSERT INTO Time VALUES(?, ?);";
+    private String SQL_DELETE = "DELETE FROM Time WHERE Time = ?;";
+    private String SQL_UPDATE = "UPDATE State SET Time = ? WHERE Id = ?;";
 
     @Override
     public List<Time> getAll() throws Exception {
@@ -38,7 +41,7 @@ public class TimeDAO implements EntityModel<Time> {
         ResultSet rs = ps.executeQuery();
         try {
             return new Time(rs.getInt(1), rs.getObject(2, LocalTime.class));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
         } finally {
             Connection.closeConnection(connection);
@@ -54,10 +57,9 @@ public class TimeDAO implements EntityModel<Time> {
         try {
             rs.next();
             return new Time(rs.getInt(1), rs.getObject(2, LocalTime.class));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
-        }
-        finally {
+        } finally {
             Connection.closeConnection(connection);
         }
     }
@@ -94,7 +96,7 @@ public class TimeDAO implements EntityModel<Time> {
     public boolean insertRange(List<Time> objects) throws Exception {
         try {
             connection = Connection.openConnection();
-            for (Time object : objects) {                
+            for (Time object : objects) {
                 PreparedStatement ps = connection.prepareStatement(SQL_INSERT);
                 ps.setInt(1, 0);
                 ps.setObject(2, object.getTime());
@@ -109,8 +111,34 @@ public class TimeDAO implements EntityModel<Time> {
 
     @Override
     public boolean exists(String filter) throws Exception {
-        if(get(filter) != null)
+        if (get(filter) != null) {
             return true;
+        }
         return false;
+    }
+
+    @Override
+    public void delete(String time) throws Exception {
+        LocalTime lc = LocalTime.parse(time);
+        delete(lc);
+    }
+
+    @Override
+    public void delete(LocalTime time) throws Exception {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
+        ps.setObject(1, time);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
+    }
+    
+    @Override
+    public void update(int id, LocalTime time) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
+        ps.setObject(1, time);
+        ps.setInt(2, id);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
     }
 }

@@ -1,19 +1,23 @@
 package enrollmentrenovation.data;
+
 import enrollmentrenovation.business.City;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CityDAO implements EntityModel<City> {
 
-   private java.sql.Connection connection;
+    private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM City;";
     private String SQL_GET = "SELECT * FROM City WHERE Name = ?;";
     private String SQL_GETINDEX = "SELECT * FROM City LIMIT ?,1;";
     private String SQL_FILTER = "SELECT * FROM City WHERE Name LIKE ?;";
     private String SQL_INSERT = "INSERT INTO City VALUES(?, ?, ?);";
-    
+    private String SQL_DELETE = "DELETE FROM State WHERE Name = ?;";
+    private String SQL_UPDATE = "UPDATE City SET Name = ?, IdState = ? WHERE Id = ?;";
+
     @Override
     public List<City> getAll() throws Exception {
         connection = Connection.openConnection();
@@ -35,7 +39,7 @@ public class CityDAO implements EntityModel<City> {
         ResultSet rs = ps.executeQuery();
         try {
             return new City(rs.getInt(1), rs.getString(2), rs.getInt(3));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
         } finally {
             Connection.closeConnection(connection);
@@ -51,10 +55,9 @@ public class CityDAO implements EntityModel<City> {
         try {
             rs.next();
             return new City(rs.getInt(1), rs.getString(2), rs.getInt(3));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
-        }
-        finally {
+        } finally {
             Connection.closeConnection(connection);
         }
     }
@@ -92,7 +95,7 @@ public class CityDAO implements EntityModel<City> {
     public boolean insertRange(List<City> objects) throws Exception {
         try {
             connection = Connection.openConnection();
-            for (City object : objects) {                
+            for (City object : objects) {
                 PreparedStatement ps = connection.prepareStatement(SQL_INSERT);
                 ps.setInt(1, 0);
                 ps.setString(2, object.getName());
@@ -107,9 +110,26 @@ public class CityDAO implements EntityModel<City> {
 
     @Override
     public boolean exists(String filter) throws Exception {
-        if(get(filter) != null)
+        if (get(filter) != null) {
             return true;
-        return false; 
+        }
+        return false;
     }
-    
+
+    public void delete(String name) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
+    }
+
+    public void update(int id, String name, int idState) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
+        ps.setString(1, name);
+        ps.setInt(2, idState);
+        ps.setInt(1, id);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
+    }
 }

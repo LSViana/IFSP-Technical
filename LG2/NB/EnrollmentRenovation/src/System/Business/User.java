@@ -10,21 +10,19 @@ public class User extends EntityModel {
     private String FirstName;
     private String LastName;
     private LocalDate Birthday;
-    private String User;
     private String Password;
-    private Integer IdState;
+    private Integer State;
     private Integer Type;
     private User() {
         // Standard constructor
     }
-    public User(Integer Id, String FirstName, String LastName, LocalDate Birthday, String User, String Password, Integer IdState, Integer Type) {
+    public User(Integer Id, String FirstName, String LastName, LocalDate Birthday, String Password, Integer IdState, Integer Type) {
         this.Id = Id;
         this.FirstName = FirstName;
         this.LastName = LastName;
         this.Birthday = Birthday;
-        this.User = User;
         this.Password = Password;
-        this.IdState = IdState;
+        this.State = IdState;
         this.Type = Type;
     }
     @Override
@@ -56,23 +54,17 @@ public class User extends EntityModel {
     public void setBirthday(LocalDate Birthday) {
         this.Birthday = Birthday;
     }
-    public String getUser() {
-        return User;
-    }
-    public void setUser(String User) {
-        this.User = User;
-    }
     public String getPassword() {
         return Password;
     }
     public void setPassword(String Password) {
         this.Password = Password;
     }
-    public Integer getIdState() {
-        return IdState;
+    public Integer getState() {
+        return State;
     }
-    public void setIdState(Integer IdState) {
-        this.IdState = IdState;
+    public void setState(Integer IdState) {
+        this.State = IdState;
     }
     public Integer getType() {
         return Type;

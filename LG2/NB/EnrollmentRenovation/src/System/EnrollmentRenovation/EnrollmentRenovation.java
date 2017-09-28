@@ -11,15 +11,15 @@ public class EnrollmentRenovation {
     private static Login login;
     public static void main(String[] args) throws Exception {
         initializeService();
+        initializeApplication();
     }
 
     private static void initializeService() throws Exception {
         service = new ProjectService();
-<<<<<<< HEAD
-        login = new Login();
+    }
+
+    private static void initializeApplication() {
+        login = new Login(service);
         login.setVisible(true);
-=======
-        List<State> st = service.getStates().getAll();
->>>>>>> bdd0f42b28f770b72dfe45b1102c63ba2d16d412
     }
 }

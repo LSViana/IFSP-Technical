@@ -1,7 +1,9 @@
 package enrollmentrenovation.data;
+
 import enrollmentrenovation.business.Discipline;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,8 @@ public class DisciplineDAO implements EntityModel<Discipline> {
     private String SQL_GETINDEX = "SELECT * FROM Discipline LIMIT ?,1;";
     private String SQL_FILTER = "SELECT * FROM Discipline WHERE Name LIKE ?;";
     private String SQL_INSERT = "INSERT INTO Discipline VALUES(?, ?);";
+    private String SQL_DELETE = "DELETE FROM Discipline WHERE Name = ?;";
+    private String SQL_UPDATE = "UPDATE Discipline SET Name = ? WHERE Id = ?;";
 
     @Override
     public List<Discipline> getAll() throws Exception {
@@ -35,7 +39,7 @@ public class DisciplineDAO implements EntityModel<Discipline> {
         ResultSet rs = ps.executeQuery();
         try {
             return new Discipline(rs.getInt(1), rs.getString(2));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
         } finally {
             Connection.closeConnection(connection);
@@ -51,10 +55,9 @@ public class DisciplineDAO implements EntityModel<Discipline> {
         try {
             rs.next();
             return new Discipline(rs.getInt(1), rs.getString(2));
-        } catch(Exception exc) {
+        } catch (Exception exc) {
             return null;
-        }
-        finally {
+        } finally {
             Connection.closeConnection(connection);
         }
     }
@@ -91,7 +94,7 @@ public class DisciplineDAO implements EntityModel<Discipline> {
     public boolean insertRange(List<Discipline> objects) throws Exception {
         try {
             connection = Connection.openConnection();
-            for (Discipline object : objects) {                
+            for (Discipline object : objects) {
                 PreparedStatement ps = connection.prepareStatement(SQL_INSERT);
                 ps.setInt(1, 0);
                 ps.setString(2, object.getName());
@@ -106,8 +109,26 @@ public class DisciplineDAO implements EntityModel<Discipline> {
 
     @Override
     public boolean exists(String filter) throws Exception {
-        if(get(filter) != null)
+        if (get(filter) != null) {
             return true;
-        return false; 
-    }    
+        }
+        return false;
+    }
+
+    @Override
+    public void delete(String name) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
+    }
+
+    public void update(int id, String name) throws ClassNotFoundException, SQLException {
+        connection = Connection.openConnection();
+        PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
+        ps.setString(1, name);
+        ps.setInt(2, id);
+        ps.executeUpdate();
+        Connection.closeConnection(connection);
+    }
 }

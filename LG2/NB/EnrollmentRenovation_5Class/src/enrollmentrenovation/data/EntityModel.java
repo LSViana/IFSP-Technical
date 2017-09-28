@@ -9,4 +9,5 @@ public interface EntityModel<T> {
 	public boolean insert(T object) throws Exception;
 	public boolean insertRange(List<T> objects) throws Exception;
 	public boolean exists(String filter) throws Exception;
+        public void delete(String filter) throws Exception;
 }
