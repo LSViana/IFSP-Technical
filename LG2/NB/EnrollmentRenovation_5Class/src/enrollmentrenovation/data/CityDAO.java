@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CityDAO implements EntityModel<City>, CityModel {
+public class CityDAO implements CityModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM City;";
@@ -37,13 +37,8 @@ public class CityDAO implements EntityModel<City>, CityModel {
         City result;
         PreparedStatement ps = connection.prepareStatement(SQL_GET);
         ResultSet rs = ps.executeQuery();
-        try {
-            return new City(rs.getInt(1), rs.getString(2), rs.getInt(3));
-        } catch (Exception exc) {
-            return null;
-        } finally {
-            Connection.closeConnection(connection);
-        }
+        Connection.closeConnection(connection);
+        return new City(rs.getInt(1), rs.getString(2), rs.getInt(3));
     }
 
     @Override
@@ -52,14 +47,9 @@ public class CityDAO implements EntityModel<City>, CityModel {
         City result;
         PreparedStatement ps = connection.prepareStatement(SQL_GETINDEX);
         ResultSet rs = ps.executeQuery();
-        try {
-            rs.next();
-            return new City(rs.getInt(1), rs.getString(2), rs.getInt(3));
-        } catch (Exception exc) {
-            return null;
-        } finally {
-            Connection.closeConnection(connection);
-        }
+        rs.next();
+        Connection.closeConnection(connection);
+        return new City(rs.getInt(1), rs.getString(2), rs.getInt(3));
     }
 
     @Override
@@ -117,7 +107,7 @@ public class CityDAO implements EntityModel<City>, CityModel {
     }
 
     @Override
-    public void delete(String name) throws ClassNotFoundException, SQLException {
+    public void delete(String name) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
         ps.executeUpdate();
@@ -125,7 +115,7 @@ public class CityDAO implements EntityModel<City>, CityModel {
     }
 
     @Override
-    public void update(int id, String name, int idState) throws ClassNotFoundException, SQLException {
+    public void update(int id, String name, int idState) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
         ps.setString(1, name);

@@ -118,14 +118,14 @@ public class StateDAO implements EntityModel<State> {
     }
 
     @Override
-    public void delete(String name) throws ClassNotFoundException, SQLException {
+    public void delete(String name) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
         ps.executeUpdate();
         Connection.closeConnection(connection);
     }
     
-    public void update(int id, String name, String initials) throws ClassNotFoundException, SQLException {
+    public void update(int id, String name, String initials) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
         ps.setString(1, name);

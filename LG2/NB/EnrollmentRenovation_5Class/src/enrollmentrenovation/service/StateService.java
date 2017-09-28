@@ -15,7 +15,7 @@ public class StateService implements StateFunctional {
     }
     
     @Override
-    public State register(int Id, String Name, String Initials) throws ClassNotFoundException, SQLException {
+    public State register(int Id, String Name, String Initials) throws Exception {
         State result = new State(Id, Name, Initials);
         try {
             dao.insert(result);
@@ -27,7 +27,7 @@ public class StateService implements StateFunctional {
     }
 
     @Override
-    public List<State> searchAll() throws SQLException, ClassNotFoundException {
+    public List<State> searchAll() throws Exception {
         try {
             return dao.getAll();
         } catch (Exception ex) {
@@ -37,7 +37,7 @@ public class StateService implements StateFunctional {
     }
 
     @Override
-    public List<State> filter(String Name) throws SQLException, ClassNotFoundException {
+    public List<State> filter(String Name) throws Exception {
         try {
             return dao.filter(Name);
         } catch (Exception ex) {
@@ -47,12 +47,12 @@ public class StateService implements StateFunctional {
     }
 
     @Override
-    public void update(int Id, String Name, String Initials) throws ClassNotFoundException, SQLException {
+    public void update(int Id, String Name, String Initials) throws Exception {
         dao.update(Id, Name, Initials);
     }
 
     @Override
-    public void delete(String Name) throws ClassNotFoundException, SQLException {
+    public void delete(String Name) throws Exception {
         dao.delete(Name);
     }    
 }

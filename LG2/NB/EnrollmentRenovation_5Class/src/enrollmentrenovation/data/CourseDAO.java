@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseDAO implements EntityModel<Course>, CourseModel {
+public class CourseDAO implements CourseModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM Course;";
@@ -145,7 +145,7 @@ public class CourseDAO implements EntityModel<Course>, CourseModel {
     }
 
     @Override
-    public void addDiscipline(int IdCourse, int IdDiscipline, int Semester, boolean Facultative) throws SQLException, ClassNotFoundException {
+    public void addDiscipline(int IdCourse, int IdDiscipline, int Semester, boolean Facultative) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_ADDDISCIPLINE);
         ps.setInt(1, IdCourse);
@@ -157,7 +157,7 @@ public class CourseDAO implements EntityModel<Course>, CourseModel {
     }
     
     @Override
-    public void deleteDiscipline(int IdCourse, int IdDiscipline) throws SQLException, ClassNotFoundException {
+    public void deleteDiscipline(int IdCourse, int IdDiscipline) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETEDISCIPLINE);
         ps.setInt(1, IdCourse);
@@ -167,7 +167,7 @@ public class CourseDAO implements EntityModel<Course>, CourseModel {
     }
 
     @Override
-    public void delete(String name) throws ClassNotFoundException, SQLException {
+    public void delete(String name) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
         ps.executeUpdate();
@@ -175,7 +175,7 @@ public class CourseDAO implements EntityModel<Course>, CourseModel {
     }
 
     @Override
-    public void update(int id, String name, int idSchool) throws ClassNotFoundException, SQLException {
+    public void update(int id, String name, int idSchool) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
         ps.setString(1, name);

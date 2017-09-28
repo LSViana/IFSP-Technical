@@ -17,7 +17,7 @@ public class TimeService implements TimeFunctional {
     }
     
     @Override
-    public Time register(int Id, LocalTime Time) throws ClassNotFoundException, SQLException {
+    public Time register(int Id, LocalTime Time) throws Exception {
         Time result = new Time(Id, Time);
         try {
             dao.insert(result);
@@ -29,7 +29,7 @@ public class TimeService implements TimeFunctional {
     }
 
     @Override
-    public List<Time> searchAll() throws SQLException, ClassNotFoundException {
+    public List<Time> searchAll() throws Exception {
         try {
             return dao.getAll();
         } catch (Exception ex) {
@@ -39,7 +39,7 @@ public class TimeService implements TimeFunctional {
     }
 
     @Override
-    public void delete(LocalTime time) throws ClassNotFoundException, SQLException {
+    public void delete(LocalTime time) throws Exception {
         try {
             dao.delete(time);
         } catch (Exception ex) {
@@ -48,7 +48,7 @@ public class TimeService implements TimeFunctional {
     }
 
     @Override
-    public void update(int id, LocalTime time) throws ClassNotFoundException, SQLException {
+    public void update(int id, LocalTime time) throws Exception {
         dao.update(id, time);
     }
 }

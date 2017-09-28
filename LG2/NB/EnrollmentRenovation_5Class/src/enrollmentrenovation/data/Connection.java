@@ -10,7 +10,7 @@ public class Connection {
     private static String USER = "root";
     private static String PASSWORD = "worldskills";
 
-    public static java.sql.Connection openConnection() throws ClassNotFoundException, SQLException {
+    public static java.sql.Connection openConnection() throws Exception {
         Class.forName(DRIVER);
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }

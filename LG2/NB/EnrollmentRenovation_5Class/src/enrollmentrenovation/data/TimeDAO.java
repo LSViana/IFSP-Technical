@@ -9,7 +9,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimeDAO implements EntityModel<Time>, TimeModel {
+public class TimeDAO implements TimeModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM Time;";
@@ -133,7 +133,7 @@ public class TimeDAO implements EntityModel<Time>, TimeModel {
     }
     
     @Override
-    public void update(int id, LocalTime time) throws ClassNotFoundException, SQLException {
+    public void update(int id, LocalTime time) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
         ps.setObject(1, time);
