@@ -2,13 +2,15 @@ package enrollmentrenovation.service;
 
 import enrollmentrenovation.business.Discipline;
 import enrollmentrenovation.data.DisciplineDAO;
+import enrollmentrenovation.data.DisciplineModel;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DisciplineService implements DisciplineFunctional {
-    private DisciplineDAO dao;
+    
+    private DisciplineModel dao;
     
     public DisciplineService() {
         dao = new DisciplineDAO();

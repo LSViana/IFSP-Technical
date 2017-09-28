@@ -2,13 +2,14 @@ package enrollmentrenovation.service;
 
 import enrollmentrenovation.business.State;
 import enrollmentrenovation.data.StateDAO;
-import java.sql.SQLException;
+import enrollmentrenovation.data.StateModel;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class StateService implements StateFunctional {
-    private StateDAO dao;
+    
+    private StateModel dao;
 
     public StateService() {
         dao = new StateDAO();

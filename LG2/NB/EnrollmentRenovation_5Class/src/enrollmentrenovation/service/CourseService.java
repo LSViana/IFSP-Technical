@@ -2,11 +2,12 @@ package enrollmentrenovation.service;
 
 import enrollmentrenovation.business.Course;
 import enrollmentrenovation.data.CourseDAO;
+import enrollmentrenovation.data.CourseModel;
 import java.util.List;
 
 public class CourseService implements CourseFunctional {
 
-    private CourseDAO dao;
+    private CourseModel dao;
 
     public CourseService() {
         dao = new CourseDAO();

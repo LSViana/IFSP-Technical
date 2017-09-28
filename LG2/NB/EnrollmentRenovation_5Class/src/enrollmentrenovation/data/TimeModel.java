@@ -1,6 +1,5 @@
 package enrollmentrenovation.data;
 
-import java.sql.SQLException;
 import java.time.LocalTime;
 import enrollmentrenovation.business.Time;
 

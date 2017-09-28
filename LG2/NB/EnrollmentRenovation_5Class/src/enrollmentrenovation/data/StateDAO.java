@@ -3,11 +3,10 @@ package enrollmentrenovation.data;
 import enrollmentrenovation.business.State;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StateDAO implements EntityModel<State> {
+public class StateDAO implements StateModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM State;";
@@ -125,6 +124,7 @@ public class StateDAO implements EntityModel<State> {
         Connection.closeConnection(connection);
     }
     
+    @Override
     public void update(int id, String name, String initials) throws Exception {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
