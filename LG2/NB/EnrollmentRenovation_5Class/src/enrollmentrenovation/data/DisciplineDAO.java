@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DisciplineDAO implements EntityModel<Discipline> {
+public class DisciplineDAO implements EntityModel<Discipline>, DisciplineModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM Discipline;";
@@ -122,7 +122,8 @@ public class DisciplineDAO implements EntityModel<Discipline> {
         ps.executeUpdate();
         Connection.closeConnection(connection);
     }
-
+    
+    @Override
     public void update(int id, String name) throws ClassNotFoundException, SQLException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);

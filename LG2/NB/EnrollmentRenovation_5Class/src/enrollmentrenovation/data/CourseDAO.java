@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseDAO implements EntityModel<Course> {
+public class CourseDAO implements EntityModel<Course>, CourseModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM Course;";
@@ -144,6 +144,7 @@ public class CourseDAO implements EntityModel<Course> {
         return false;
     }
 
+    @Override
     public void addDiscipline(int IdCourse, int IdDiscipline, int Semester, boolean Facultative) throws SQLException, ClassNotFoundException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_ADDDISCIPLINE);
@@ -154,7 +155,8 @@ public class CourseDAO implements EntityModel<Course> {
         ps.executeUpdate();
         Connection.closeConnection(connection);
     }
-
+    
+    @Override
     public void deleteDiscipline(int IdCourse, int IdDiscipline) throws SQLException, ClassNotFoundException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETEDISCIPLINE);
@@ -164,6 +166,7 @@ public class CourseDAO implements EntityModel<Course> {
         Connection.closeConnection(connection);
     }
 
+    @Override
     public void delete(String name) throws ClassNotFoundException, SQLException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
@@ -171,6 +174,7 @@ public class CourseDAO implements EntityModel<Course> {
         Connection.closeConnection(connection);
     }
 
+    @Override
     public void update(int id, String name, int idSchool) throws ClassNotFoundException, SQLException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);

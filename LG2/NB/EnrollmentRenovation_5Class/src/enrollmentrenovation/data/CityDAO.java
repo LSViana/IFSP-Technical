@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CityDAO implements EntityModel<City> {
+public class CityDAO implements EntityModel<City>, CityModel {
 
     private java.sql.Connection connection;
     private String SQL_GETALL = "SELECT * FROM City;";
@@ -116,6 +116,7 @@ public class CityDAO implements EntityModel<City> {
         return false;
     }
 
+    @Override
     public void delete(String name) throws ClassNotFoundException, SQLException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_DELETE);
@@ -123,6 +124,7 @@ public class CityDAO implements EntityModel<City> {
         Connection.closeConnection(connection);
     }
 
+    @Override
     public void update(int id, String name, int idState) throws ClassNotFoundException, SQLException {
         connection = Connection.openConnection();
         PreparedStatement ps = connection.prepareStatement(SQL_UPDATE);
