@@ -1,5 +1,6 @@
 package enrollmentrenovation.business;
 public class CourseStructure {
+    
     private Course course;
     private Discipline discipline;
     private int Semester;
@@ -43,6 +44,7 @@ public class CourseStructure {
     public void setFacultative(boolean Facultative) {
         this.Facultative = Facultative;
     }
-
     
+    
+
 }

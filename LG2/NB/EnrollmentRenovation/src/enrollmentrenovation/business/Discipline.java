@@ -6,13 +6,21 @@ public class Discipline {
 
     private int Id;
     private String Name;
+    // Relationships
     private List<SchoolClass> Classes;
-    private List<CourseStructure> Courses;
+    private List<CourseStructure> Structure;
+    private List<Credits> Credits;
     private List<Restriction> Requirements;
+    private List<Restriction> Achievements;
 
-    public Discipline(int Id, String Name) {
+    public Discipline(int Id, String Name, List<SchoolClass> Classes, List<CourseStructure> Structure, List<Credits> Credits, List<Restriction> Requirements, List<Restriction> Achievements) {
         this.Id = Id;
         this.Name = Name;
+        this.Classes = Classes;
+        this.Structure = Structure;
+        this.Credits = Credits;
+        this.Requirements = Requirements;
+        this.Achievements = Achievements;
     }
 
     public int getId() {
@@ -39,12 +47,20 @@ public class Discipline {
         this.Classes = Classes;
     }
 
-    public List<CourseStructure> getCourses() {
-        return Courses;
+    public List<CourseStructure> getStructure() {
+        return Structure;
     }
 
-    public void setCourses(List<CourseStructure> Courses) {
-        this.Courses = Courses;
+    public void setStructure(List<CourseStructure> Structure) {
+        this.Structure = Structure;
+    }
+
+    public List<Credits> getCredits() {
+        return Credits;
+    }
+
+    public void setCredits(List<Credits> Credits) {
+        this.Credits = Credits;
     }
 
     public List<Restriction> getRequirements() {
@@ -54,6 +70,15 @@ public class Discipline {
     public void setRequirements(List<Restriction> Requirements) {
         this.Requirements = Requirements;
     }
+
+    public List<Restriction> getAchievements() {
+        return Achievements;
+    }
+
+    public void setAchievements(List<Restriction> Achievements) {
+        this.Achievements = Achievements;
+    }
+    
     
     
 }
