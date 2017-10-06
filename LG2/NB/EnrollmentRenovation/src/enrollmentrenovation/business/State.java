@@ -7,14 +7,16 @@ public class State {
     private int Id;
     private String Name;
     private String Initials;
-    private List<City> Cities;
+    // Relationships
     private List<School> Schools;
     private List<User> Users;
 
-    public State(int Id, String Name, String Initials) {
+    public State(int Id, String Name, String Initials, List<School> Schools, List<User> Users) {
         this.Id = Id;
         this.Name = Name;
         this.Initials = Initials;
+        this.Schools = Schools;
+        this.Users = Users;
     }
 
     public int getId() {
@@ -41,14 +43,6 @@ public class State {
         this.Initials = Initials;
     }
 
-    public List<City> getCities() {
-        return Cities;
-    }
-
-    public void setCities(List<City> Cities) {
-        this.Cities = Cities;
-    }
-
     public List<School> getSchools() {
         return Schools;
     }
@@ -66,4 +60,5 @@ public class State {
     }
     
     
+
 }

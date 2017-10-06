@@ -27,6 +27,7 @@ public class Time {
     public void setTime(LocalTime Time) {
         this.Time = Time;
     }
-
+    
+    
     
 }

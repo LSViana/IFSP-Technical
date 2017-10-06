@@ -1,0 +1,6 @@
+1. The 'Connection' class is not going to be instantiated, then, it'll be used as a static class to supply database connections and to close then.
+
+2. Model:
+    Connection conn = ConnectionFactory.openConnection();
+        
+    ConnectionFactory.closeConnection(conn);

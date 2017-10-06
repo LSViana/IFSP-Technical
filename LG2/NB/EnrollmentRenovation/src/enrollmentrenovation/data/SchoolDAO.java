@@ -1,30 +1,28 @@
 package enrollmentrenovation.data;
 
+import enrollmentrenovation.business.Course;
 import enrollmentrenovation.business.School;
-import enrollmentrenovation.business.SchoolClass;
 import enrollmentrenovation.business.State;
-import enrollmentrenovation.business.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StateDAO implements StateModel {
+public class SchoolDAO implements SchoolModel {
 
     @Override
-    public State get(int Id) throws Exception {
+    public School get(int Id) throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "SELECT * FROM State WHERE Id = ?;";
-            State result = null;
+            String sql = "SELECT * FROM School WHERE Id = ?;";
+            School result = null;
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, Id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                result = new State(rs.getInt(1), rs.getString(2), rs.getString(3), null, null);
+                result = new School(rs.getInt(1), rs.getString(2), null, null);
             } else {
                 return null;
             }
@@ -35,17 +33,17 @@ public class StateDAO implements StateModel {
     }
 
     @Override
-    public State get(String Name) throws Exception {
+    public School get(String Name) throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "SELECT * FROM State WHERE Name = ?;";
-            State result = null;
+            String sql = "SELECT * FROM School WHERE Name = ?;";
+            School result = null;
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, Name);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                result = new State(rs.getInt(1), rs.getString(2), rs.getString(3), null, null);
+                result = new School(rs.getInt(1), rs.getString(2), null, null);
             } else {
                 return null;
             }
@@ -56,19 +54,19 @@ public class StateDAO implements StateModel {
     }
 
     @Override
-    public List<School> getSchools(State state) throws Exception {
+    public List<Course> getCourses(School school) throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "SELECT * FROM School WHERE IdState = ?;";
-            List<School> result = new ArrayList<>();
+            String sql = "SELECT * FROM Course WHERE IdSchool = ?;";
+            List<Course> result = new ArrayList<>();
             // Relationships DAO
-            SchoolDAO schoolDAO = new SchoolDAO();
+            CourseDAO courseDAO = new CourseDAO();
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, state.getId());
+            stmt.setInt(1, school.getId());
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                result.add(schoolDAO.get(rs.getInt(1)));
+                result.add(courseDAO.get(rs.getInt(1)));
             }
             return result;
         } finally {
@@ -77,39 +75,19 @@ public class StateDAO implements StateModel {
     }
 
     @Override
-    public List<User> getUsers(State state) throws Exception {
+    public State getState(School school) throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "SELECT * FROM User WHERE IdState = ?;";
-            List<User> result = new ArrayList<>();
+            String sql = "SELECT * FROM State WHERE Id = ?;";
+            State result = null;
             // Relationships DAO
-            UserDAO userDAO = new UserDAO();
+            StateDAO stateDAO = new StateDAO();
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, state.getId());
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                result.add(userDAO.get(rs.getInt(1)));
-            }
-            return result;
-        } finally {
-            ConnectionFactory.closeConnection(conn);
-        }
-    }
-
-    @Override
-    public List<State> getAll() throws Exception {
-        Connection conn = ConnectionFactory.openConnection();
-        try {
-            String sql = "SELECT * FROM State;";
-            List<State> result = new ArrayList<>();
-            // SQL Query Execution
-            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, school.getState().getId());
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                result.add(new State(rs.getInt(1), rs.getString(2), rs.getString(3), null, null));
-            } else {
-                return null;
+                result = stateDAO.get(rs.getInt(1));
             }
             return result;
         } finally {
@@ -118,14 +96,32 @@ public class StateDAO implements StateModel {
     }
 
     @Override
-    public State insert(State object) throws Exception {
+    public List<School> getAll() throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "INSERT INTO State VALUES(0, ?, ?);";
+            String sql = "SELECT * FROM School;";
+            List<School> result = new ArrayList<>();
+            // SQL Query Execution
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                result.add(new School(rs.getInt(1), rs.getString(2), null, null));
+            }
+            return result;
+        } finally {
+            ConnectionFactory.closeConnection(conn);
+        }
+    }
+
+    @Override
+    public School insert(School object) throws Exception {
+        Connection conn = ConnectionFactory.openConnection();
+        try {
+            String sql = "INSERT INTO School VALUES(0, ?, ?);";
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, object.getName());
-            stmt.setString(2, object.getInitials());
+            stmt.setInt(2, object.getState().getId());
             stmt.executeUpdate();
             correctIdentity(conn, object);
             return object;
@@ -135,21 +131,21 @@ public class StateDAO implements StateModel {
     }
 
     @Override
-    public void insertRange(List<State> objects) throws Exception {
-        for(State object : objects)
+    public void insertRange(List<School> objects) throws Exception {
+        for(School object : objects)
             insert(object);
     }
 
     @Override
-    public boolean exists(State object) throws Exception {
+    public boolean exists(School object) throws Exception {
         return get(object.getId()) != null;
     }
 
     @Override
-    public void delete(State object) throws Exception {
+    public void delete(School object) throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "DELETE FROM State WHERE Id = ?;";
+            String sql = "DELETE FROM School WHERE Id = ?;";
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, object.getId());
@@ -160,24 +156,24 @@ public class StateDAO implements StateModel {
     }
 
     @Override
-    public void update(State object) throws Exception {
+    public void update(School object) throws Exception {
         Connection conn = ConnectionFactory.openConnection();
         try {
-            String sql = "UPDATE State SET Name = ?, Initials = ? WHERE Id = ?;";
+            String sql = "UPDATE School SET Name = ?, IdState = ? WHERE Id = ?;";
             // SQL Query Execution
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(3, object.getId());
             //
-            stmt.setString(2, object.getName());
-            stmt.setString(3, object.getInitials());
+            stmt.setString(1, object.getName());
+            stmt.setInt(2, object.getState().getId());
             stmt.executeUpdate();
         } finally {
             ConnectionFactory.closeConnection(conn);
         }
     }
     
-    private void correctIdentity(Connection conn, State object) throws Exception {
-        String sql = "SELECT * FROM State WHERE Id IN (SELECT MAX(Id) FROM State WHERE Name = ?);";
+    private void correctIdentity(Connection conn, School object) throws Exception {
+        String sql = "SELECT * FROM School WHERE Id IN (SELECT MAX(Id) FROM School WHERE Name = ?);";
         // SQL Query Execution
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, object.getName());

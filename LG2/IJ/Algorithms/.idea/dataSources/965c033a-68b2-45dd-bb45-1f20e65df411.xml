@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="enrollmentrenovation@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="enrollmentrenovation">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cidadeautomobilistica"/>
+    <schema id="4" parent="1" name="enterprise"/>
+    <schema id="5" parent="1" name="enterprise2"/>
+    <schema id="6" parent="1" name="firstmysql"/>
+    <schema id="7" parent="1" name="imobiliaria"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="new_imobiliaria"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="sakila"/>
+    <schema id="13" parent="1" name="school"/>
+    <schema id="14" parent="1" name="sys"/>
+    <schema id="15" parent="1" name="world"/>
+    <table id="16" parent="2" name="class"/>
+    <table id="17" parent="2" name="course"/>
+    <table id="18" parent="2" name="coursestructure"/>
+    <table id="19" parent="2" name="credits"/>
+    <table id="20" parent="2" name="discipline"/>
+    <table id="21" parent="2" name="enrollment"/>
+    <table id="22" parent="2" name="restriction"/>
+    <table id="23" parent="2" name="school"/>
+    <table id="24" parent="2" name="state"/>
+    <table id="25" parent="2" name="time"/>
+    <table id="26" parent="2" name="user"/>
+    <column id="27" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="16" name="iddiscipline">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="16" name="day">
+      <Position>3</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="16" name="idinitialtime">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="16" name="idfinaltime">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="16" name="initialdate">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="16" name="enddate">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="34" parent="16" name="iddiscipline">
+      <ColNames>iddiscipline</ColNames>
+    </index>
+    <index id="35" parent="16" name="idfinaltime">
+      <ColNames>idfinaltime</ColNames>
+    </index>
+    <index id="36" parent="16" name="idinitialtime">
+      <ColNames>idinitialtime</ColNames>
+    </index>
+    <key id="37" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="16" name="class_ibfk_1">
+      <ColNames>iddiscipline</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>discipline</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="39" parent="16" name="class_ibfk_3">
+      <ColNames>idinitialtime</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>time</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="40" parent="16" name="class_ibfk_2">
+      <ColNames>idfinaltime</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>time</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="41" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="43" parent="17" name="idschool">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="44" parent="17" name="idschool">
+      <ColNames>idschool</ColNames>
+    </index>
+    <key id="45" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="17" name="course_ibfk_1">
+      <ColNames>idschool</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>school</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="47" parent="18" name="idcourse">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="18" name="iddiscipline">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="18" name="semester">
+      <Position>3</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="50" parent="18" name="facultative">
+      <Position>4</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <key id="51" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idcourse
+iddiscipline</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="52" parent="18" name="coursestructure_ibfk_1">
+      <ColNames>idcourse</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="53" parent="19" name="idstudent">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="19" name="iddiscipline">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="19" name="idcourse">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="19" name="daterequeriment">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="57" parent="19" name="idcourse">
+      <ColNames>idcourse</ColNames>
+    </index>
+    <index id="58" parent="19" name="iddiscipline">
+      <ColNames>iddiscipline</ColNames>
+    </index>
+    <key id="59" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idstudent
+iddiscipline
+idcourse</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="60" parent="19" name="credits_ibfk_1">
+      <ColNames>idstudent</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="61" parent="19" name="credits_ibfk_2">
+      <ColNames>iddiscipline</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>discipline</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="62" parent="19" name="credits_ibfk_3">
+      <ColNames>idcourse</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="63" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="64" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="65" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="66" parent="21" name="idstudent">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="21" name="idclass">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="21" name="idcourse">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="21" name="semester">
+      <Position>4</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="21" name="status">
+      <Position>5</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="21" name="grade">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="72" parent="21" name="idclass">
+      <ColNames>idclass</ColNames>
+    </index>
+    <index id="73" parent="21" name="idcourse">
+      <ColNames>idcourse</ColNames>
+    </index>
+    <key id="74" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idstudent
+idclass
+idcourse</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="75" parent="21" name="enrollment_ibfk_1">
+      <ColNames>idstudent</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="76" parent="21" name="enrollment_ibfk_2">
+      <ColNames>idclass</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>class</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="77" parent="21" name="enrollment_ibfk_3">
+      <ColNames>idcourse</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="78" parent="22" name="idrequired">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="22" name="idprovided">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="80" parent="22" name="idprovided">
+      <ColNames>idprovided</ColNames>
+    </index>
+    <key id="81" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idrequired
+idprovided</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="82" parent="22" name="restriction_ibfk_1">
+      <ColNames>idrequired</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>discipline</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="83" parent="22" name="restriction_ibfk_2">
+      <ColNames>idprovided</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>discipline</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="84" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="85" parent="23" name="idstate">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="86" parent="23" name="idstate">
+      <ColNames>idstate</ColNames>
+    </index>
+    <key id="87" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="88" parent="23" name="school_ibfk_1">
+      <ColNames>idstate</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>state</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="89" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="90" parent="24" name="name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="24" name="initials">
+      <Position>3</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="92" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="94" parent="25" name="time">
+      <Position>2</Position>
+      <DataType>time(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="95" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="96" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="97" parent="26" name="firstname">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="26" name="lastname">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="26" name="birthday">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="26" name="user">
+      <Position>5</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="26" name="password">
+      <Position>6</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="26" name="idstate">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="26" name="type">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="104" parent="26" name="idstate">
+      <ColNames>idstate</ColNames>
+    </index>
+    <key id="105" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="106" parent="26" name="user_ibfk_1">
+      <ColNames>idstate</ColNames>
+      <RefSchemaName>enrollmentrenovation</RefSchemaName>
+      <RefTableName>state</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

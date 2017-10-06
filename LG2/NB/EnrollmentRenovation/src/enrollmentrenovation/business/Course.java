@@ -6,13 +6,19 @@ public class Course {
 
     private int Id;
     private String Name;
+    // Relationships
+    private School School;
+    private List<Credits> Credits;
     private List<CourseStructure> Structure;
     private List<Enrollment> Enrollments;
-    private School School;
 
-    public Course(int Id, String Name) {
+    public Course(int Id, String Name, School School, List<Credits> Credits, List<CourseStructure> Structure, List<Enrollment> Enrollments) {
         this.Id = Id;
         this.Name = Name;
+        this.School = School;
+        this.Credits = Credits;
+        this.Structure = Structure;
+        this.Enrollments = Enrollments;
     }
 
     public int getId() {
@@ -31,6 +37,22 @@ public class Course {
         this.Name = Name;
     }
 
+    public School getSchool() {
+        return School;
+    }
+
+    public void setSchool(School School) {
+        this.School = School;
+    }
+
+    public List<Credits> getCredits() {
+        return Credits;
+    }
+
+    public void setCredits(List<Credits> Credits) {
+        this.Credits = Credits;
+    }
+
     public List<CourseStructure> getStructure() {
         return Structure;
     }
@@ -46,14 +68,7 @@ public class Course {
     public void setEnrollments(List<Enrollment> Enrollments) {
         this.Enrollments = Enrollments;
     }
-
-    public School getSchool() {
-        return School;
-    }
-
-    public void setSchool(School School) {
-        this.School = School;
-    }
     
     
+
 }

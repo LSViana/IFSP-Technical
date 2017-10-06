@@ -6,13 +6,21 @@ public class Discipline {
 
     private int Id;
     private String Name;
-    private List<SchoolClass> Classes;
-    private List<CourseStructure> Courses;
+    // Relationships
+    private List<SchoolClass> SchoolClasses;
+    private List<CourseStructure> Structure;
+    private List<Credits> Credits;
     private List<Restriction> Requirements;
+    private List<Restriction> Achievements;
 
-    public Discipline(int Id, String Name) {
+    public Discipline(int Id, String Name, List<SchoolClass> SchoolClasses, List<CourseStructure> Structure, List<Credits> Credits, List<Restriction> Requirements, List<Restriction> Achievements) {
         this.Id = Id;
         this.Name = Name;
+        this.SchoolClasses = SchoolClasses;
+        this.Structure = Structure;
+        this.Credits = Credits;
+        this.Requirements = Requirements;
+        this.Achievements = Achievements;
     }
 
     public int getId() {
@@ -31,20 +39,28 @@ public class Discipline {
         this.Name = Name;
     }
 
-    public List<SchoolClass> getClasses() {
-        return Classes;
+    public List<SchoolClass> getSchoolClasses() {
+        return SchoolClasses;
     }
 
-    public void setClasses(List<SchoolClass> Classes) {
-        this.Classes = Classes;
+    public void setSchoolClasses(List<SchoolClass> SchoolClasses) {
+        this.SchoolClasses = SchoolClasses;
     }
 
-    public List<CourseStructure> getCourses() {
-        return Courses;
+    public List<CourseStructure> getStructure() {
+        return Structure;
     }
 
-    public void setCourses(List<CourseStructure> Courses) {
-        this.Courses = Courses;
+    public void setStructure(List<CourseStructure> Structure) {
+        this.Structure = Structure;
+    }
+
+    public List<Credits> getCredits() {
+        return Credits;
+    }
+
+    public void setCredits(List<Credits> Credits) {
+        this.Credits = Credits;
     }
 
     public List<Restriction> getRequirements() {
@@ -54,6 +70,15 @@ public class Discipline {
     public void setRequirements(List<Restriction> Requirements) {
         this.Requirements = Requirements;
     }
+
+    public List<Restriction> getAchievements() {
+        return Achievements;
+    }
+
+    public void setAchievements(List<Restriction> Achievements) {
+        this.Achievements = Achievements;
+    }
+
     
     
 }
