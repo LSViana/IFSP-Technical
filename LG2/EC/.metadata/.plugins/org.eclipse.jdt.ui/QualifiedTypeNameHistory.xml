@@ -14,15 +14,19 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="system.start"/>
 <fullyQualifiedTypeName name="com.mysql.fabric.xmlrpc.base.Array"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.lang.StrictMath"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="system.data.StudentDAO"/>
 <fullyQualifiedTypeName name="system.business.Student"/>
 <fullyQualifiedTypeName name="system.service.StudentFunctional"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="system.data.Connection"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="testArea.Start"/>
+<fullyQualifiedTypeName name="linkedList.LinkedList.Node"/>
+<fullyQualifiedTypeName name="linkedList.ILinkedList"/>
+<fullyQualifiedTypeName name="linkedList.LinkedList"/>
 </qualifiedTypeNameHistroy>
