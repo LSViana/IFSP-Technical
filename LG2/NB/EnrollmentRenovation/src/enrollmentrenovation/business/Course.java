@@ -68,7 +68,4 @@ public class Course {
     public void setEnrollments(List<Enrollment> Enrollments) {
         this.Enrollments = Enrollments;
     }
-    
-    
-
 }

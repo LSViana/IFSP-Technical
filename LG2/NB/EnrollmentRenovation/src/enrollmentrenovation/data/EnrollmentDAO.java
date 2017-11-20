@@ -1,7 +1,6 @@
 package enrollmentrenovation.data;
 
 import enrollmentrenovation.business.Course;
-import enrollmentrenovation.business.Discipline;
 import enrollmentrenovation.business.Enrollment;
 import enrollmentrenovation.business.SchoolClass;
 import enrollmentrenovation.business.User;

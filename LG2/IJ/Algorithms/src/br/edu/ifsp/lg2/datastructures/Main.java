@@ -1,5 +1,6 @@
 package br.edu.ifsp.lg2.datastructures;
 
+import br.edu.ifsp.lg2.datastructures.queue.ArrayQueue;
 import br.edu.ifsp.lg2.datastructures.vector.Vector;
 import br.edu.ifsp.lg2.datastructures.vector.VectorObject;
 import br.edu.ifsp.lg2.datastructures.vector.VectorString;
@@ -9,7 +10,22 @@ public class Main {
     public static void main(String[] args) {
         //vectorString();
         //vectorObject();
-        vectorGeneric();
+        //vectorGeneric();
+        arrayQueue();
+    }
+
+    public static void arrayQueue() {
+        ArrayQueue<String> arrayQueue = new ArrayQueue<>(2);
+        System.out.println(arrayQueue.getTextData());
+        arrayQueue.enqueue("Lucas");
+        arrayQueue.enqueue("Cecília");
+        System.out.println(arrayQueue.getTextData());
+        arrayQueue.enqueue("Roberto");
+        System.out.println(arrayQueue.getTextData());
+        System.out.println(arrayQueue.dequeue());
+        System.out.println(arrayQueue.getTextData());
+        System.out.println(arrayQueue.dequeue());
+        System.out.println(arrayQueue.getTextData());
     }
 
     public static void vectorString() {
