@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Rammetto+One');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+body main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backcolor-anim 2s infinite;
+}
+
+@keyframes backcolor-anim {
+    0%, 100% {
+        background-color: pink;
+    }
+    50% {
+        background-color: palevioletred;
+    }
+}
+
+@keyframes color-anim {
+    0%, 100% {
+        color: green;
+    }
+    50% {
+        color: greenyellow;
+    }
+}
+
+body main p {
+    font-size: 5em;
+    font-family: 'Nanum Pen Script';
+    animation: color-anim 2s infinite;
+}
+
+body main p span {
+    color: hotpink;
+    font-family: 'Nanum Pen Script';
+    font-size: larger;
+}
