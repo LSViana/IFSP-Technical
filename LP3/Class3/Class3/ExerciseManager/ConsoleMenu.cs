@@ -43,17 +43,24 @@ namespace Class3.ExerciseManager
                     }
                     else
                     {
-                        var kvp = Actions.ElementAt(option - 1);
+                        var kvp = Actions.ElementAtOrDefault(option - 1);
                         if (kvp.Value != null)
                             kvp.Value.Invoke();
+                        else
+                            RunErrorMessage();
                     }
                 }
                 else
                 {
-                    Console.WriteLine(ErrorMessage);
+                    RunErrorMessage();
                 }
             }
             while (userInput != LeaveCommand);
+        }
+
+        private void RunErrorMessage()
+        {
+            Console.WriteLine(ErrorMessage);
         }
 
         private void PrintMenu()

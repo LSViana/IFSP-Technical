@@ -7,3 +7,12 @@ G:\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.exe
 G:\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.pdb
 G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.exe
 G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.pdb
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.exe.config
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.exe
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.pdb
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.csprojResolveAssemblyReference.cache
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.Properties.Resources.resources
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.csproj.GenerateResource.Cache
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.csproj.CoreCompileInputs.cache
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.exe
+D:\Users\Lucas Viana\Documents\Source\Desktop\School\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.pdb
