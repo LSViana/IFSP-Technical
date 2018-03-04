@@ -1,0 +1,9 @@
+C:\Users\aluno\Documents\TI-09\IFSP-Technical\Class3\Class3\bin\Debug\Class3.exe.config
+G:\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.exe.config
+G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.csprojResolveAssemblyReference.cache
+G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.Properties.Resources.resources
+G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.csproj.GenerateResource.Cache
+G:\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.exe
+G:\IFSP-Technical\LP3\Class3\Class3\bin\Debug\Class3.pdb
+G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.exe
+G:\IFSP-Technical\LP3\Class3\Class3\obj\Debug\Class3.pdb
