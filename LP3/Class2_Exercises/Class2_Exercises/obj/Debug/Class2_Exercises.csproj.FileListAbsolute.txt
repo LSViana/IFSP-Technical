@@ -1,0 +1,7 @@
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\bin\Debug\Class2_Exercises.exe.config
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\bin\Debug\Class2_Exercises.exe
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\bin\Debug\Class2_Exercises.pdb
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\obj\Debug\Class2_Exercises.csproj.CoreCompileInputs.cache
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\obj\Debug\Class2_Exercises.exe
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\obj\Debug\Class2_Exercises.pdb
+d:\Users\Lucas Viana\Documents\Visual Studio 2017\Projects\Class2_Exercises\Class2_Exercises\obj\Debug\Class2_Exercises.csprojResolveAssemblyReference.cache
