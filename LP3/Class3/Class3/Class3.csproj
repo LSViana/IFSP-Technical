@@ -52,6 +52,9 @@
     <Compile Include="ExerciseManager\Exercises\Exercise1.cs" />
     <Compile Include="ExerciseManager\Exercises\Exercise2.cs" />
     <Compile Include="ExerciseManager\Exercises\Exercise3.cs" />
+    <Compile Include="ExerciseManager\Exercises\Exercise4.cs" />
+    <Compile Include="ExerciseManager\Exercises\Exercise5.cs" />
+    <Compile Include="ExerciseManager\Extensions.cs" />
     <Compile Include="ExerciseManager\IExercise.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
