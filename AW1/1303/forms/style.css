@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Sacramento');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+    color: dimgray;
+}
+
+:root {
+    --medium-margin: 5px;
+    --big-margin: 10px;
+    --medium-box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+    --small-dimension: 30px;
+    --ifsp-logo-green: #68b92c;
+}
+
+main {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+input, select {
+    margin-top: 20px;
+}
+
+.userRegister > form > div > label {
+    margin: 0px;
+    margin-top: -43px;
+    margin-bottom: 25px;
+}
+
+select:focus + label, input:focus + label {
+    color: var(--ifsp-logo-green);
+}
+
+.userRegister {
+    padding: var(--big-margin);
+    box-shadow: var(--medium-box-shadow);
+    width: 500px;
+}
+
+.userRegister > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    border-bottom: 1px lightgray solid;
+}
+
+.userRegister > div img {
+    width: var(--small-dimension);
+    height: var(--small-dimension);
+}
+
+.userRegister form div {
+    display: flex;
+    flex-flow: column;
+}
+
+.userRegister form div label {
+    font-family: Segoe UI;
+    font-size: small;
+    font-weight: 600;
+    transition: color .5s;
+}
+
+.userRegister input, .userRegister select {
+    height: 25px !important;
+    border: none;
+    border-bottom: 2px lightgray solid;
+    transition: border-bottom-color .5s;
+}
+
+.userRegister input:focus, .userRegister select:focus {
+    border-bottom: 2px var(--ifsp-logo-green) solid;
+}
+
+.userRegister p {
+    text-align: center;
+    margin: var(--medium-margin);
+    padding: var(--medium-margin);
+    font-family: ABeeZee;
+    font-size: xx-large;
+}
