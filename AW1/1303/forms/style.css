@@ -9,11 +9,15 @@
 }
 
 :root {
-    --medium-margin: 5px;
+    --small-margin: 3px;
+    --medium-margin: 7px;
+    --medium-big-margin: 9px;
+    --medium-small-margin: 5px;
     --big-margin: 10px;
     --medium-box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
     --small-dimension: 30px;
     --ifsp-logo-green: #68b92c;
+    --high-negative-margin: -43px;
 }
 
 main {
@@ -27,22 +31,46 @@ main {
 }
 
 input, select {
-    margin-top: 20px;
+    margin: var(--medium-margin);
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+form button {
+    padding: var(--big-margin);
+    font-family: ABeeZee;
+    border: none;
+    background-color: var(--ifsp-logo-green);
+    color: white;
+    border-radius: var(--small-margin);
+    font-variant: small-caps;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    margin: var(--medium-margin) auto;
 }
 
 .userRegister > form > div > label {
-    margin: 0px;
-    margin-top: -43px;
-    margin-bottom: 25px;
+    margin: var(--medium-big-margin);
+    position: fixed;
+}
+
+.userRegister > form > div > label[mandatory]::after {
+    content: "*";
+    color: var(--ifsp-logo-green);
 }
 
 select:focus + label, input:focus + label {
     color: var(--ifsp-logo-green);
+    font-size: 10px !important;
+    transform: translateY(-10px);
 }
 
 .userRegister {
     padding: var(--big-margin);
     box-shadow: var(--medium-box-shadow);
+    border-radius: var(--small-margin);
     width: 500px;
 }
 
@@ -68,18 +96,31 @@ select:focus + label, input:focus + label {
     font-family: Segoe UI;
     font-size: small;
     font-weight: 600;
-    transition: color .5s;
+    transition: color .5s, font-size .3s ease-out, transform .3s ease-out;
+}
+
+.userRegister input:not([value=""]) + label,
+.userRegister select:not([value=""]) + label {
+    font-size: 10px !important;
+    transform: translateY(-10px);
 }
 
 .userRegister input, .userRegister select {
     height: 25px !important;
     border: none;
     border-bottom: 2px lightgray solid;
-    transition: border-bottom-color .5s;
+    transition: border-bottom-color .5s, color .5s;
+}
+
+.userRegister select[value=""],
+.userRegister input[type="date"].userRegister input[value=""],
+.userRegister input[type="file"].userRegister input[value=""] {
+    color: rgba(0, 0, 0, 0);
 }
 
 .userRegister input:focus, .userRegister select:focus {
     border-bottom: 2px var(--ifsp-logo-green) solid;
+    color: dimgray;
 }
 
 .userRegister p {

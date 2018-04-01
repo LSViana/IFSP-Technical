@@ -1,0 +1,6 @@
+J:\IFSP-Technical\LP3\Class7\Exceptions\bin\Debug\Exceptions.exe.config
+J:\IFSP-Technical\LP3\Class7\Exceptions\obj\Debug\Exceptions.csprojResolveAssemblyReference.cache
+J:\IFSP-Technical\LP3\Class7\Exceptions\bin\Debug\Exceptions.exe
+J:\IFSP-Technical\LP3\Class7\Exceptions\bin\Debug\Exceptions.pdb
+J:\IFSP-Technical\LP3\Class7\Exceptions\obj\Debug\Exceptions.exe
+J:\IFSP-Technical\LP3\Class7\Exceptions\obj\Debug\Exceptions.pdb

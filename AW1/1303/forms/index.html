@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>HTML5 Forms</title>
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -18,102 +19,109 @@
             </div>
             <form>
                 <div>
-                    <input type="text" name="name" id="inputName">
-                    <label for="inputName">Name</label>
+                    <input type="text" name="name" id="inputName" required>
+                    <label for="inputName" mandatory>Name</label>
                 </div>
                 <div>
-                    <input type="password" name="password" id="inputPassword">
-                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" id="inputPassword" required>
+                    <label for="inputPassword" mandatory>Password</label>
                 </div>
                 <div>
-                    <input type="text" name="cpf" pattern="d{3}.d{3}.d{3}-{d2}" id="inputCPF">
-                    <label for="inputCPF">CPF</label>
+                    <input type="text" name="cpf" pattern="d{3}.d{3}.d{3}-{d2}" id="inputCPF" required>
+                    <label for="inputCPF" mandatory>CPF</label>
                 </div>
                 <div>
-                    <select name="gender" id="inputGender">
+                    <select name="gender" id="inputGender" required>
+                        <option selected disabled>Select</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
-                    <label for="inputGender">Gender</label>
+                    <label for="inputGender" mandatory>Gender</label>
                 </div>
                 <div>
-                    <input type="date" name="dob" id="inputDOB">
-                    <label for="inputDOB">Date Of Birth</label>
+                    <input type="date" name="dob" id="inputDOB" required>
+                    <label for="inputDOB" mandatory>Date Of Birth</label>
                 </div>
                 <div>
-                    <select name="marital" id="inputMarital">
-                    <option value="married">Married</option>
-                    <option value="divorced">Divorced</option>
+                    <select name="marital" id="inputMarital" required>
+                        <option selected disabled>Select</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
                         <option value="bachelor">Bachelor</option>
                         <option value="other">Other</option>
                     </select>
-                    <label for="inputMarital">Marital Status</label>
+                    <label for="inputMarital" mandatory>Marital Status</label>
                 </div>
                 <div>
-                    <select name="school" id="inputSchool">
+                    <select name="school" id="inputSchool" required>
+                        <option selected disabled>Select</option>
                         <option value="elementary">Elementary</option>
                         <option value="middle">Middle</option>
                         <option value="highSchool">High School</option>
                         <option value="graduation">Graduation</option>
                         <option value="other">Other</option>
                     </select>
-                    <label for="inputSchool">School Level</label>
+                    <label for="inputSchool" mandatory>School Level</label>
                 </div>
                 <div>
-                    <input type="text" name="occupation" id="inputOccupation">
-                    <label for="inputOccupation">Occupation</label>
+                    <input type="text" name="occupation" id="inputOccupation" required>
+                    <label for="inputOccupation" mandatory>Occupation</label>
                 </div>
                 <div>
-                    <input type="number" name="revenue" id="inputRevenue">
-                    <label for="inputRevenue">Monthly Revenue</label>
+                    <input type="number" name="revenue" id="inputRevenue" required>
+                    <label for="inputRevenue" mandatory>Monthly Revenue</label>
                 </div>
                 <div>
-                    <input type="text" name="dependents" id="inputDependents">
-                    <label for="inputDependents">Dependents</label>
+                    <input type="text" name="dependents" id="inputDependents" required>
+                    <label for="inputDependents" mandatory>Dependents</label>
                 </div>
                 <div>
-                    <input type="text" name="telephone" id="inputTelephone">
-                    <label for="inputTelephone">Telephone</label>
+                    <input type="text" name="telephone" id="inputTelephone" required>
+                    <label for="inputTelephone" mandatory>Telephone</label>
                 </div>
                 <div>
-                    <input type="email" name="email" id="inputEmail">
-                    <label for="inputEmail">E-mail</label>
+                    <input type="email" name="email" id="inputEmail" required>
+                    <label for="inputEmail" mandatory>E-mail</label>
                 </div>
                 <div>
-                    <select name="state" id="inputState">
-                        <option value="saopaulo">São Paulo</option>
-                        <option value="riodejaneiro">Rio de Janeiro</option>
-                    </select>
-                    <label for="inputState">State</label>
+                    <input type="text" name="postalCode" id="inputPostalCode" required>
+                    <label for="inputPostalCode" mandatory>Postal Code</label>
                 </div>
                 <div>
-                    <select name="city" id="inputCity">
-                        <option value="saopaulo">São Paulo</option>
-                        <option value="santos">Santos</option>
-                        <option value="riodejaneiro">Rio de Janeiro</option>
-                        <option value="petropolis">Petrópolis</option>
-                    </select>
-                    <label for="inputCity">City</label>
+                    <input type="text" name="state" id="inputState" data-state required>
+                    <label for="inputState" mandatory>State</label>
                 </div>
                 <div>
-                    <select name="urgency" id="inputUrgency">
+                    <input type="text" name="city" id="inputCity" data-city required>
+                    <label for="inputCity" mandatory>City</label>
+                </div>
+                <div>
+                    <input type="text" name="street" id="inputStreet" data-street required>
+                    <label for="inputStreet" mandatory>Street</label>
+                </div>
+                <div>
+                    <input type="text" name="st_number" id="inputStNumber" required>
+                    <label for="inputStNumber" mandatory>Street Number</label>
+                </div>
+                <div>
+                    <select name="urgency" id="inputUrgency" required>
+                        <option selected disabled>Select</option>
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
                         <option value="high">High</option>
                     </select>
-                    <label for="inputUrgency">Urgency Level</label>
+                    <label for="inputUrgency" mandatory>Urgency Level</label>
                 </div>
                 <div>
-                    <input type="text" name="message" id="inputMessage">
-                    <label for="inputMessage">Message</label>
+                    <input type="text" name="message" id="inputMessage" required>
+                    <label for="inputMessage" mandatory>Message</label>
                 </div>
                 <div>
                     <input type="file" name="media" id="inputMedia">
-                    <label for="inputMedia">Attach Media</label>
                 </div>
                 <button type="submit">
-                    Register
+                    REGISTER
                 </button>
             </form>
         </section>

@@ -4,3 +4,10 @@ F:\IFSP-Technical\LP3\Class5\Class5\Class5\bin\Debug\Class5.pdb
 F:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.csprojResolveAssemblyReference.cache
 F:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.exe
 F:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.pdb
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.csprojResolveAssemblyReference.cache
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.csproj.CoreCompileInputs.cache
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.exe
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\obj\Debug\Class5.pdb
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\bin\Debug\Class5.exe.config
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\bin\Debug\Class5.exe
+G:\IFSP-Technical\LP3\Class5\Class5\Class5\bin\Debug\Class5.pdb

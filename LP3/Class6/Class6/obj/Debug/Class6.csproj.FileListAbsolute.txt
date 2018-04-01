@@ -1,0 +1,6 @@
+J:\IFSP-Technical\LP3\Class6\Class6\bin\Debug\Class6.exe.config
+J:\IFSP-Technical\LP3\Class6\Class6\bin\Debug\Class6.exe
+J:\IFSP-Technical\LP3\Class6\Class6\bin\Debug\Class6.pdb
+J:\IFSP-Technical\LP3\Class6\Class6\obj\Debug\Class6.csprojResolveAssemblyReference.cache
+J:\IFSP-Technical\LP3\Class6\Class6\obj\Debug\Class6.exe
+J:\IFSP-Technical\LP3\Class6\Class6\obj\Debug\Class6.pdb

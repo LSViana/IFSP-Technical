@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sacramento');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-weight: 400;
+    user-select: none;
+    outline: none;
+}
+
+:root {
+    --box-shadow-medium: 0px 0px 6px dimgray;
+    --tiny-margin: 6px;
+    --small-margin: 12px;
+    --medium-margin: 24px;
+    --big-margin: 36px;
+    --huge-margin: 72px;
+    --light-color: rgb(255, 187, 0);
+    --medium-color: rgb(255, 145, 0);
+    --dark-color: rgb(223, 119, 0);
+    --medium-interval: .3s;
+}
+
+body {
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/DTcw7Px/dawn-sky-at-winter-timelapse_v1lqe6gp-g__F0000.png");
+    background-blend-mode: lighten;
+    background-position: center;
+    background-size: cover;
+}
+
+form div label {
+    font-size: large;
+    position: relative;
+    height: var(--big-margin);
+}
+
+form button {
+    font-size: large;
+    margin: var(--small-margin);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    border-radius: var(--small-margin);
+    padding: var(--big-margin);
+}
+
+#form-login {
+    display: flex;
+    flex-flow: column;
+}
+
+#form-login button {
+    background-color: var(--medium-color);
+    color: white;
+    border-radius: 100%;
+    width: var(--huge-margin);
+    height: var(--huge-margin);
+    border: none;
+    font-size: xx-large;
+    transition: background-color var(--medium-interval), color var(--medium-interval), filter var(--medium-interval);
+}
+
+#form-login button:active {
+    background-color: white;
+    color: var(--medium-color);
+}
+
+#form-login button:focus {
+    filter: brightness(1.2);
+}
+
+#form-login div {
+    display: flex;
+    flex-flow: column;
+}
+
+#form-login .buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-login div input, #form-login div select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: large;
+    border-bottom: solid 2px white;
+    padding: var(--tiny-margin);
+    transition: border-bottom var(--medium-interval), color var(--medium-interval);
+}
+
+#form-login div input:focus, #form-login div select:focus {
+    border-bottom: solid 2px var(--light-color);
+    color: var(--light-color);
+}
+
+#form-login div input:focus + label, #form-login div select:focus + label {
+    color: var(--light-color);
+}
+
+#form-login div input:focus + label,
+#form-login div input:not([value=""]) + label {
+    font-size: small;
+    transform: translateY(-16px);
+}
+
+#form-login div label {
+    margin: -32px 0px 20px 4px;
+    transition: transform var(--medium-interval) ease-out, font-size var(--medium-interval) ease-out, color var(--medium-interval) ease-out;
+}
+
+#form-login div label {
+    color: rgba(255, 255, 255, .6);
+}
+
+#section-login {
+    background: rgba(255, 255, 255, .2);
+}
+
+#section-login > div {
+    display: inline-flex;
+    align-items: center;
+}
+
+#section-login > div h2 {
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#section-login > div h2 span {
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+#section-login > div *:not(span) {
+    margin: var(--small-margin);
+}
+
+#section-login > div > div {
+    display: flex;
+    background: white;
+    padding: var(--tiny-margin);
+    border-radius: 100%;
+}
+
+#section-login > div > div img {
+    width: 30px;
+    height: 30px;
+    filter: hue-rotate(197deg) contrast(2);
+}

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sacramento');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+    font-family: Roboto;
+}
+
+:root {
+    /* Box shadows */
+    --box-shadow-medium: 0px 0px 6px dimgray;
+    /* Margins */
+    --tiny-least-margin: 1px;
+    --tiny-tiny-margin: 2px;
+    --tiny-large-margin: 4px;
+    --tiny-margin: 6px;
+    --small-tiny-margin: 9px;
+    --small-margin: 12px;
+    --medium-small-margin: 18px;
+    --medium-margin: 24px;
+    --big-margin: 36px;
+    --huge-margin: 72px;
+    --huge-huge-margin: 144px;
+    /* Colors */
+    --base-color: rgb(255, 145, 0);
+    --base-r: 255;
+    --base-g: 145;
+    --base-b: 0;
+    --light-light-color: rgb(var(--base-r), calc(var(--base-g) + 81), calc(var(--base-b) + 145));
+    --light-color: rgb(var(--base-r), var(--base-g), var(--base-b));
+    --light-color-30: rgba(var(--base-r), var(--base-g), var(--base-b), .3);
+    --medium-color: rgb(var(--base-r), var(--base-g), var(--base-b));
+    --dark-medium-color: rgb(calc(var(--base-r) - 17), calc(var(--base-g) - 10), var(--base-b));
+    --dark-color: rgb(calc(var(--base-r) - 23), calc(var(--base-g) - 22), var(--base-b));
+    --fore-color: white;
+    --fore-dark-color: dimgray;
+    --back-color: gainsboro;
+    --back-color-60: rgba(220, 220, 220, .6);
+    --back-dark-color: rgb(203, 203, 203);
+    --back-dark-dark-color: rgb(188, 188, 188);
+    /* Intervals */
+    --medium-interval: .3s;
+    --large-interval: .6s;
+    /* Borders */
+    --white-fore-border: solid var(--fore-color) var(--tiny-tiny-margin);
+    /* Sizes */
+    --left-side-bar: 220px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-flow: row;
+    padding: var(--tiny-margin);
+    background: var(--medium-color);
+}
+
+/* Top */
+
+#center-nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    margin: 0px var(--small-margin);
+}
+
+#center-nav ul a {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--fore-color);
+    padding: 0px var(--tiny-margin);
+    border-radius: var(--tiny-margin);
+    transition: background-color var(--medium-interval) ease-in;
+}
+
+#center-nav ul a:hover {
+    background-color: var(--dark-medium-color);
+}
+
+#center-nav ul a:focus {
+    background-color: var(--dark-color);
+}
+
+#left-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#left-nav h2 {
+    color: var(--fore-color);
+}
+
+#left-nav>a {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px var(--small-margin);
+    height: 100%;
+    background: var(--medium-color);
+    border-radius: 100%;
+    transition: background-color var(--medium-interval) ease-in;
+}
+
+#left-nav>a:hover {
+    background-color: var(--dark-medium-color);
+}
+
+#left-nav>a:active {
+    background-color: var(--dark-color);
+}
+
+#left-nav>a div {
+    background-color: var(--fore-color);
+    width: var(--small-margin);
+    height: var(--tiny-tiny-margin);
+    transition: transform var(--medium-interval) ease-out, opacity var(--medium-interval) ease-out, margin var(--medium-interval) ease-out;
+}
+
+#left-nav>a div:not(:first-child) {
+    margin-top: var(--tiny-tiny-margin);
+}
+
+.toggle-menu-icon div {
+    margin: 0px !important;
+}
+
+.toggle-menu-icon div:nth-child(1) {
+    transform: rotate(45deg) translate3d(var(--tiny-tiny-margin), var(--tiny-tiny-margin), 0px);
+}
+
+.toggle-menu-icon div:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-menu-icon div:nth-child(3) {
+    transform: rotate(-45deg) translate3d(var(--tiny-least-margin), calc(var(--tiny-least-margin) * -1), 0px);
+}
+
+#nethub-logo {
+    display: flex;
+    padding: var(--tiny-margin);
+    background: var(--fore-color);
+    border-radius: 100%;
+    margin: 0px var(--tiny-margin);
+}
+
+#nethub-logo img {
+    width: var(--medium-margin);
+    height: var(--medium-margin);
+    filter: hue-rotate(197deg) contrast(2);
+}
+
+#right-nav {
+    display: flex;
+    flex-flow: row;
+    margin: 0px var(--tiny-tiny-margin) 0px auto;
+    border-radius: var(--tiny-margin);
+    transition: padding-left var(--medium-interval) ease-out, background-color var(--medium-interval) ease-out;
+}
+
+.search-area {
+    background-color: white !important;
+}
+
+.search-area > a > div {
+    background-color: white !important;
+}
+
+.search-area > a > div:hover {
+    background-color: var(--back-color) !important;
+}
+
+.search-area > a > div > div {
+    border-color: var(--light-color) !important;
+}
+
+.search-area input {
+    width: var(--left-side-bar) !important;
+}
+
+#query {
+    border: none;
+    color: var(--fore-dark-color);
+    margin: auto var(--tiny-margin);
+    height: 80%;
+    width: 0px;
+    background-color: transparent;
+    transition: width var(--medium-interval) ease-out;
+}
+
+#search-icon {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: var(--big-margin);
+    border-radius: 100%;
+    transform: rotate(45deg);
+    background-color: var(--medium-color);
+    transition: background-color var(--medium-interval);
+}
+
+#search-icon:hover {
+    background-color: var(--dark-medium-color);
+}
+
+#search-icon:active {
+    background-color: var(--dark-color);
+}
+
+#search-icon div:nth-child(1) {
+    width: var(--small-margin);
+    height: var(--small-margin);
+    border: var(--white-fore-border);
+    border-radius: 100%;
+}
+
+#search-icon div:nth-child(2) {
+    width: var(--tiny-margin);
+    border: var(--white-fore-border);
+    border-width: 1px;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-flow: row;
+    height: calc(100vh - calc(var(--small-margin) + var(--big-margin)));
+}
+
+#left-main {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    width: var(--left-side-bar);
+    height: calc(100vh - calc(var(--small-margin) + var(--big-margin)));
+    padding: var(--small-margin);
+    background-color: var(--back-color-60);
+    color: var(--dark-color);
+    transform: translateX(calc(var(--left-side-bar) * -1));
+    transition: transform var(--large-interval) ease-in-out;
+}
+
+.left-to-right {
+    transform: translateX(0px) !important;
+}
+
+#profile-picture {
+    display: block;
+    width: 100%;
+}
+
+#profile-picture img {
+    width: 100%;
+    border-radius: 100%;
+    filter: saturate(0);
+}
+
+#profile-picture::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    width: calc(calc(var(--left-side-bar) - var(--small-margin)) - var(--small-margin));
+    height: calc(calc(var(--left-side-bar) - var(--small-margin)) - var(--small-margin));
+    border-radius: 100%;
+    background-color: var(--light-color-30);
+    filter: brightness(.8) saturate(2);
+}
+
+#options ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    margin-top: var(--small-margin);
+}
+
+#options ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--big-margin);
+    text-decoration: none;
+    text-align: center;
+    margin: var(--tiny-tiny-margin) 0px;
+    border-radius: var(--tiny-margin);
+    color: var(--fore-dark-color);
+    font-weight: 900;
+    transition: background-color var(--medium-interval) ease-in;
+}
+
+#options ul a:hover {
+    background-color: var(--back-dark-color);
+}
+
+#options ul a:active {
+    background-color: var(--back-dark-dark-color);
+}
+
+#user-name {
+    text-align: center;
+    font-size: x-large;
+}
+
+#user-email {
+    text-align: center;
+    font-size: small;
+    font-weight: 100;
+}
+
+#additional-info {
+    margin-top: var(--tiny-margin);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#additional-info div {
+    text-align: center;
+    margin: var(--tiny-margin);
+    background: var(--back-dark-color);
+    border-radius: var(--tiny-margin);
+    padding: var(--tiny-margin);
+    font-size: x-small;
+    font-weight: 600;
+}
+
+#additional-info *:not(:first-child) {
+    margin-top: var(--tiny-margin);
+}
+
+#bottom-info {
+    margin: auto 0px 0px 0px;
+}
+
+#bottom-info a {
+    text-align: center;
+    color: var(--fore-dark-color);
+    font-size: x-small;
+    transition: color var(--medium-interval) ease-in;
+}
+
+#bottom-info a:hover {
+    color: var(--medium-color);
+}
+
+#bottom-info a:active {
+    color: var(--dark-medium-color);
+}
+
+/* Bottom */

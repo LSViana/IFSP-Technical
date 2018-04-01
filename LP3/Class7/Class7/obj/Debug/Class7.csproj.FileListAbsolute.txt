@@ -1,0 +1,9 @@
+J:\IFSP-Technical\LP3\Class7\Class7\bin\Debug\Class7.exe.config
+J:\IFSP-Technical\LP3\Class7\Class7\bin\Debug\Class7.exe
+J:\IFSP-Technical\LP3\Class7\Class7\bin\Debug\Class7.pdb
+J:\IFSP-Technical\LP3\Class7\Class7\obj\Debug\Class7.csprojResolveAssemblyReference.cache
+J:\IFSP-Technical\LP3\Class7\Class7\obj\Debug\Class7.Start.resources
+J:\IFSP-Technical\LP3\Class7\Class7\obj\Debug\Class7.Properties.Resources.resources
+J:\IFSP-Technical\LP3\Class7\Class7\obj\Debug\Class7.csproj.GenerateResource.Cache
+J:\IFSP-Technical\LP3\Class7\Class7\obj\Debug\Class7.exe
+J:\IFSP-Technical\LP3\Class7\Class7\obj\Debug\Class7.pdb

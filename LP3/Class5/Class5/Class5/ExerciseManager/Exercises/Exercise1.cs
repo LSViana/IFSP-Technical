@@ -1,5 +1,6 @@
 ﻿using Class2_Exercises.Exercises;
 using Class3.ExerciseManager;
+using Class5.ExerciseManager.Exercises.Exercise1_Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
