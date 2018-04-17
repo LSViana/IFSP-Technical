@@ -1,0 +1,3 @@
+Os principais métodos da interface Collection são os métodos para adicionar novos itens "add(T)", "addAll(Collection<T>)", "contains(T)", "iterator()", "remove(T)", "removeAll(Collection<T>)", "retainAll(Collection<T>)" e, por fim, "size()"
+
+A implementação de ArrayList utiliza um vetor internamente para armazenar os dados, enquanto a LinkedList se baseia no uso de nós que guardam objetos de tipos genéricos e estes apontam para o próximo, formando, então, uma lista simplesmente encadeada.

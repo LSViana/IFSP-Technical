@@ -59,9 +59,14 @@ nav {
     flex-flow: row;
     padding: var(--tiny-margin);
     background: var(--medium-color);
+    box-shadow: var(--box-shadow-medium);
 }
 
 /* Top */
+
+#center-nav {
+    display: none;
+}
 
 #center-nav ul {
     list-style: none;
