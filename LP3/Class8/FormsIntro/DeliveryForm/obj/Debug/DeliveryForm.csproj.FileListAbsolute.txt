@@ -1,0 +1,10 @@
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\bin\Debug\DeliveryForm.exe.config
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\bin\Debug\DeliveryForm.exe
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\bin\Debug\DeliveryForm.pdb
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.csprojResolveAssemblyReference.cache
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.Form1.resources
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.Properties.Resources.resources
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.csproj.GenerateResource.cache
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.csproj.CoreCompileInputs.cache
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.exe
+G:\IFSP-Technical\LP3\Class8\FormsIntro\DeliveryForm\obj\Debug\DeliveryForm.pdb

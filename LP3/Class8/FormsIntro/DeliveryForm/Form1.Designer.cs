@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txProductValue = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbFidelityCustomer = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbStates = new System.Windows.Forms.ComboBox();
             this.gbPostingKind = new System.Windows.Forms.GroupBox();
-            this.rbSedex = new System.Windows.Forms.RadioButton();
             this.rbSedex10 = new System.Windows.Forms.RadioButton();
+            this.rbSedex = new System.Windows.Forms.RadioButton();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblProductValue = new System.Windows.Forms.Label();
+            this.lblFreightValue = new System.Windows.Forms.Label();
+            this.lblTotalValue = new System.Windows.Forms.Label();
+            this.lblProductValueResult = new System.Windows.Forms.Label();
+            this.lblFreightValueResult = new System.Windows.Forms.Label();
+            this.lblTotalValueResult = new System.Windows.Forms.Label();
             this.gbPostingKind.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,15 +62,15 @@
             this.txProductValue.Size = new System.Drawing.Size(150, 20);
             this.txProductValue.TabIndex = 1;
             // 
-            // checkBox1
+            // cbFidelityCustomer
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(26, 44);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(105, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Fidelity Customer";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbFidelityCustomer.AutoSize = true;
+            this.cbFidelityCustomer.Location = new System.Drawing.Point(26, 44);
+            this.cbFidelityCustomer.Name = "cbFidelityCustomer";
+            this.cbFidelityCustomer.Size = new System.Drawing.Size(105, 17);
+            this.cbFidelityCustomer.TabIndex = 2;
+            this.cbFidelityCustomer.Text = "Fidelity Customer";
+            this.cbFidelityCustomer.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -81,42 +81,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Estado";
             // 
-            // comboBox1
+            // cmbStates
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC",
+            this.cmbStates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStates.FormattingEnabled = true;
+            this.cmbStates.Items.AddRange(new object[] {
             "SP",
-            "SE",
-            "TO"});
-            this.comboBox1.Location = new System.Drawing.Point(69, 70);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(62, 21);
-            this.comboBox1.TabIndex = 4;
+            "RJ",
+            "MG",
+            "ES"});
+            this.cmbStates.Location = new System.Drawing.Point(69, 70);
+            this.cmbStates.Name = "cmbStates";
+            this.cmbStates.Size = new System.Drawing.Size(62, 21);
+            this.cmbStates.TabIndex = 4;
             // 
             // gbPostingKind
             // 
@@ -131,18 +108,6 @@
             this.gbPostingKind.TabStop = false;
             this.gbPostingKind.Text = "Posting Kind";
             // 
-            // rbSedex
-            // 
-            this.rbSedex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rbSedex.AutoSize = true;
-            this.rbSedex.Location = new System.Drawing.Point(70, 25);
-            this.rbSedex.Name = "rbSedex";
-            this.rbSedex.Size = new System.Drawing.Size(61, 17);
-            this.rbSedex.TabIndex = 0;
-            this.rbSedex.TabStop = true;
-            this.rbSedex.Text = "SEDEX";
-            this.rbSedex.UseVisualStyleBackColor = true;
-            // 
             // rbSedex10
             // 
             this.rbSedex10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -151,9 +116,19 @@
             this.rbSedex10.Name = "rbSedex10";
             this.rbSedex10.Size = new System.Drawing.Size(76, 17);
             this.rbSedex10.TabIndex = 0;
-            this.rbSedex10.TabStop = true;
             this.rbSedex10.Text = "SEDEX 10";
             this.rbSedex10.UseVisualStyleBackColor = true;
+            // 
+            // rbSedex
+            // 
+            this.rbSedex.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbSedex.AutoSize = true;
+            this.rbSedex.Location = new System.Drawing.Point(70, 25);
+            this.rbSedex.Name = "rbSedex";
+            this.rbSedex.Size = new System.Drawing.Size(61, 17);
+            this.rbSedex.TabIndex = 0;
+            this.rbSedex.Text = "SEDEX";
+            this.rbSedex.UseVisualStyleBackColor = true;
             // 
             // btnCalculate
             // 
@@ -164,86 +139,87 @@
             this.btnCalculate.TabIndex = 6;
             this.btnCalculate.Text = "&Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // label3
+            // lblProductValue
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(276, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Product Value:";
+            this.lblProductValue.AutoSize = true;
+            this.lblProductValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductValue.ForeColor = System.Drawing.Color.Blue;
+            this.lblProductValue.Location = new System.Drawing.Point(276, 21);
+            this.lblProductValue.Name = "lblProductValue";
+            this.lblProductValue.Size = new System.Drawing.Size(91, 13);
+            this.lblProductValue.TabIndex = 7;
+            this.lblProductValue.Text = "Product Value:";
             // 
-            // label4
+            // lblFreightValue
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(276, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Product Value:";
+            this.lblFreightValue.AutoSize = true;
+            this.lblFreightValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFreightValue.ForeColor = System.Drawing.Color.Blue;
+            this.lblFreightValue.Location = new System.Drawing.Point(276, 45);
+            this.lblFreightValue.Name = "lblFreightValue";
+            this.lblFreightValue.Size = new System.Drawing.Size(86, 13);
+            this.lblFreightValue.TabIndex = 7;
+            this.lblFreightValue.Text = "Freight Value:";
             // 
-            // label5
+            // lblTotalValue
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(276, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Product Value:";
+            this.lblTotalValue.AutoSize = true;
+            this.lblTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalValue.ForeColor = System.Drawing.Color.Blue;
+            this.lblTotalValue.Location = new System.Drawing.Point(276, 69);
+            this.lblTotalValue.Name = "lblTotalValue";
+            this.lblTotalValue.Size = new System.Drawing.Size(76, 13);
+            this.lblTotalValue.TabIndex = 7;
+            this.lblTotalValue.Text = "Total Value:";
             // 
-            // label6
+            // lblProductValueResult
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblProductValueResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Location = new System.Drawing.Point(373, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "0";
+            this.lblProductValueResult.Location = new System.Drawing.Point(373, 21);
+            this.lblProductValueResult.Name = "lblProductValueResult";
+            this.lblProductValueResult.Size = new System.Drawing.Size(66, 13);
+            this.lblProductValueResult.TabIndex = 8;
+            this.lblProductValueResult.Text = "0";
             // 
-            // label7
+            // lblFreightValueResult
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblFreightValueResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Location = new System.Drawing.Point(373, 44);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "0";
+            this.lblFreightValueResult.Location = new System.Drawing.Point(373, 45);
+            this.lblFreightValueResult.Name = "lblFreightValueResult";
+            this.lblFreightValueResult.Size = new System.Drawing.Size(66, 13);
+            this.lblFreightValueResult.TabIndex = 8;
+            this.lblFreightValueResult.Text = "0";
             // 
-            // label8
+            // lblTotalValueResult
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTotalValueResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Location = new System.Drawing.Point(373, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "0";
+            this.lblTotalValueResult.Location = new System.Drawing.Point(373, 69);
+            this.lblTotalValueResult.Name = "lblTotalValueResult";
+            this.lblTotalValueResult.Size = new System.Drawing.Size(66, 13);
+            this.lblTotalValueResult.TabIndex = 8;
+            this.lblTotalValueResult.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 247);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTotalValueResult);
+            this.Controls.Add(this.lblFreightValueResult);
+            this.Controls.Add(this.lblProductValueResult);
+            this.Controls.Add(this.lblTotalValue);
+            this.Controls.Add(this.lblFreightValue);
+            this.Controls.Add(this.lblProductValue);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.gbPostingKind);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbStates);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbFidelityCustomer);
             this.Controls.Add(this.txProductValue);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -263,19 +239,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txProductValue;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbFidelityCustomer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbStates;
         private System.Windows.Forms.GroupBox gbPostingKind;
         private System.Windows.Forms.RadioButton rbSedex;
         private System.Windows.Forms.RadioButton rbSedex10;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblProductValue;
+        private System.Windows.Forms.Label lblFreightValue;
+        private System.Windows.Forms.Label lblTotalValue;
+        private System.Windows.Forms.Label lblProductValueResult;
+        private System.Windows.Forms.Label lblFreightValueResult;
+        private System.Windows.Forms.Label lblTotalValueResult;
     }
 }
 

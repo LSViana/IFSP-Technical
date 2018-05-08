@@ -8,3 +8,13 @@ J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csproj.G
 J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.exe
 J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.pdb
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\bin\Debug\Calculator.exe.config
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\bin\Debug\Calculator.exe
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\bin\Debug\Calculator.pdb
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.Form1.resources
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.exe
+G:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.pdb
