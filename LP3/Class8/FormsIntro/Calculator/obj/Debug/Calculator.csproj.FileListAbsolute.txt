@@ -1,0 +1,10 @@
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\bin\Debug\Calculator.exe.config
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\bin\Debug\Calculator.exe
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\bin\Debug\Calculator.pdb
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.Form1.resources
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.exe
+J:\IFSP-Technical\LP3\Class8\FormsIntro\Calculator\obj\Debug\Calculator.pdb

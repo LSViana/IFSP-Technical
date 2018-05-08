@@ -1,0 +1,9 @@
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\bin\Debug\TemperatureConverter.exe.config
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\bin\Debug\TemperatureConverter.exe
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\bin\Debug\TemperatureConverter.pdb
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\obj\Debug\TemperatureConverter.Form1.resources
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\obj\Debug\TemperatureConverter.Properties.Resources.resources
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\obj\Debug\TemperatureConverter.csproj.GenerateResource.cache
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\obj\Debug\TemperatureConverter.csproj.CoreCompileInputs.cache
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\obj\Debug\TemperatureConverter.exe
+J:\IFSP-Technical\LP3\Class8\FormsIntro\TemperatureConverter\obj\Debug\TemperatureConverter.pdb
