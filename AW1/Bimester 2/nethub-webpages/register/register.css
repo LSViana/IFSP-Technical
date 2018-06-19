@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sacramento');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-weight: 400;
+    user-select: none;
+    outline: none;
+}
+
+:root {
+    /* Box shadows */
+    --box-shadow-medium: 0px 0px 6px dimgray;
+    --box-shadow-material: 1px 1px 6px dimgray;
+    /* Margins */
+    --tiny-least-margin: 1px;
+    --tiny-tiny-margin: 2px;
+    --tiny-large-margin: 4px;
+    --tiny-margin: 6px;
+    --small-tiny-margin: 9px;
+    --small-margin: 12px;
+    --medium-small-margin: 18px;
+    /* Viana, que porra é essa?
+        Pra que tudo isso amigo?
+        Você é melhor do que isto. 
+        Você me traumatizou.
+        E o pau do Roberto o Matheus mamou. 
+        Ass: Eduardo Mendes R. de Faria, 2018 :) */
+    --medium-margin: 24px;
+    --big-medium-margin: 36px;
+    --big-margin: 54px;
+    --huge-margin: 72px;
+    --huge-huge-margin: 144px;
+    /* Colors */
+    --base-color: rgb(255, 145, 0);
+    --base-r: 255;
+    --base-g: 145;
+    --base-b: 0;
+    --light-light-color: rgb(var(--base-r), calc(var(--base-g) + 81), calc(var(--base-b) + 145));
+    --light-color: rgb(var(--base-r), var(--base-g), var(--base-b));
+    --light-color-30: rgba(var(--base-r), var(--base-g), var(--base-b), .3);
+    --medium-color: rgb(var(--base-r), var(--base-g), var(--base-b));
+    --dark-medium-color: rgb(calc(var(--base-r) - 17), calc(var(--base-g) - 10), var(--base-b));
+    --dark-color: rgb(calc(var(--base-r) - 23), calc(var(--base-g) - 22), var(--base-b));
+    --fore-color: white;
+    --fore-dark-color: dimgray;
+    --back-color: gainsboro;
+    --back-color-60: rgba(220, 220, 220, .6);
+    --back-dark-color: rgb(203, 203, 203);
+    --back-dark-dark-color: rgb(188, 188, 188);
+    /* Intervals */
+    --medium-interval: .3s;
+    --large-interval: .6s;
+    /* Borders */
+    --white-fore-border: solid var(--fore-color) var(--tiny-tiny-margin);
+    /* Sizes */
+    --material-round: 2px;
+    --left-side-bar: 220px;
+    --trending-card: 180px;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("https://hdqwalls.com/download/silhouette-of-man-during-red-sun-wb-2048x1152.jpg");
+    background-blend-mode: lighten;
+    background-position: center;
+    background-size: cover;
+    filter: hue-rotate(25deg);
+}
+
+form div label {
+    font-size: large;
+    position: relative;
+    height: var(--big-margin);
+}
+
+form button {
+    font-size: large;
+    margin: var(--small-margin);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    border-radius: var(--small-margin);
+    padding: var(--big-margin);
+}
+
+#form-login {
+    display: flex;
+    flex-flow: column;
+}
+
+#form-login button {
+    background-color: var(--medium-color);
+    color: black;
+    border: none;
+    font-weight: 700;
+    transition: background-color var(--medium-interval), color var(--medium-interval), filter var(--medium-interval);
+}
+
+#form-login button:active {
+    background-color: black;
+    color: var(--medium-color);
+}
+
+#form-login button:focus {
+    filter: brightness(1.2);
+}
+
+#form-login div {
+    display: flex;
+    flex-flow: column;
+}
+
+#form-login .buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-login div input, #form-login div select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    border: none;
+    font-weight: 600;
+    font-size: large;
+    border-bottom: solid 2px #020202;
+    padding: var(--tiny-margin);
+    transition: border-bottom var(--medium-interval), color var(--medium-interval);
+}
+
+#form-login div input:focus, #form-login div select:focus {
+    border-bottom: solid 2px var(--light-color);
+    color: var(--light-color);
+}
+
+#form-login div input:focus + label, #form-login div select:focus + label {
+    color: var(--light-color);
+}
+
+#form-login div input:focus + label,
+#form-login div input:not([value=""]) + label {
+    font-size: small;
+    transform: translateY(-16px);
+}
+
+#form-login div label {
+    margin: -32px 0px 20px 4px;
+    transition: transform var(--medium-interval) ease-out, font-size var(--medium-interval) ease-out, color var(--medium-interval) ease-out;
+}
+
+#form-login div label {
+    color: #00000099;
+}
+
+.md-button {
+    box-shadow: 1px 1px 6px rgb(66, 66, 66, .5);
+    border-radius: 2px;
+    font-size: 1em;
+    padding: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: box-shadow var(--medium-interval);
+}
+
+.md-button:active {
+    box-shadow: 1px 1px 3px rgb(66, 66, 66, .5);
+}
+
+#section-login {
+    background: rgba(255, 255, 255, .2);
+}
+
+#section-login > div {
+    display: inline-flex;
+    align-items: center;
+}
+
+#section-login > div h2 {
+    color: black;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.highlighted-text {
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+#section-login > div *:not(span) {
+    margin: var(--small-margin);
+}
+
+#section-login > div > div {
+    display: flex;
+    background: black;
+    padding: var(--tiny-margin);
+    border-radius: 100%;
+}
+
+#section-login > div > div img {
+    width: 30px;
+    height: 30px;
+    filter: hue-rotate(197deg) contrast(2);
+}
+
+#section-login{
+    animation-name: openCircle;
+    animation-duration: 1s;
+}
+
+#section-login > *:not(#heading){
+    animation-name: openItems;
+    animation-duration: 2s;
+}
+
+#heading{
+    position: relative;
+    animation-name: openHeading;
+    animation-duration: 1.4s;
+}
+
+/* Left Section */
+#left-section {
+    animation: openHeading 1.4s normal;
+    background: rgba(255, 255, 255, .2);
+    margin: var(--medium-margin);
+}
+
+#languages {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--tiny-margin) 0px;
+    border-top: black var(--tiny-tiny-margin) solid;
+    border-bottom: black var(--tiny-tiny-margin) solid;
+}
+
+.language {
+    display: flex;
+    flex-flow: row;
+    background-color: black;
+    color: var(--base-color);
+    padding: var(--small-tiny-margin);
+    margin: var(--tiny-tiny-margin);
+    border-radius: var(--tiny-tiny-margin);
+    text-transform: uppercase;
+    width: 70%;
+    transition: background-color var(--medium-interval);
+}
+
+.language:hover {
+    background-color: var(--base-color);
+}
+
+.language:hover p {
+    color: black;
+}
+
+.language p {
+    text-align: center;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+@keyframes openHeading {
+
+    0% {
+        opacity: 0;
+        top: 120px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+
+}
+
+@keyframes openCircle {
+
+    0% {
+        border-radius: 100%;
+        transform: translateY(-15px) scale(0);
+    }
+    
+    80% {
+        border-radius: var(--small-margin);
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+} 
+
+@keyframes openItems {
+
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+} 

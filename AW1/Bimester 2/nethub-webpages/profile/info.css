@@ -1,0 +1,308 @@
+:root {
+
+    --small-margin: 12px;
+    --big-margin: 54px;
+    --great-margin: 250px;
+
+    font-family: 'Roboto';
+}
+
+/* removing the filters set int the profile.css file and altering the standard 100% width */
+
+.no-filter img{ 
+    width: var(--great-margin); 
+    border-radius: 100%;
+}
+
+/* setting the layout for the main section of the info page (3 sections) */
+
+main{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+/* setting the sections internal layout, meanwhile defining its width as a third part of the total screen width */
+
+main section{
+    width:30%;
+    margin-top: 15px;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+
+
+}
+
+/* giving a little bit of margin to the section top */
+
+main section h2{
+    margin-top: 5px;
+
+
+    font-size: var(--big-medium-margin);
+    color:#ff9100;
+
+}
+
+/* giving identation to the items on the sections as well as setting the font size bigger*/
+
+.item{
+    margin-top:10px;
+    margin-left: 15px;
+
+    font-size: 24px;
+}
+
+/* making them occupy all available space on their sections */
+
+.item, .item input, .item textarea{
+    width:100%;
+}
+/* making the labels "float" and setting its style transition time*/
+
+.item label{
+    position: relative;
+    top:15px;
+
+    transition: all 0.3s, color 0s;
+}
+
+/* erasing the borders from the inputs, to look more material-like */
+
+.item input{
+    border-style:none;
+    border-bottom-style: solid;
+    margin-top:0px;
+}
+
+/* adjusting the settings of the textarea */
+
+.item textarea{
+    margin-top:20px;
+    min-height: 200px;
+    resize: vertical;
+}
+
+/* adjusting the stats labels to not coincidate with their inputs */
+
+#stats .item .data{
+    margin-top:5px;
+}
+
+/* adjusting the stats items so they can be better visualized */
+
+#stats .item{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 10px;
+}
+
+
+/* giving some identation to the text inside the inputs/textareas */
+
+textarea, input{
+    padding-left:5px;
+
+    font-size:32px;
+    
+}
+
+textarea{
+    padding-top:5px;
+    position:relative;
+    top:20px;
+}
+
+#info .item label{
+    top:35px;
+}
+/* setting a size to the badge icons */
+
+.badge img{
+    width: 60px;
+}
+/* setting a bottom margin to the badge labels */
+
+.badge label{
+    margin-bottom: 10px;
+}
+
+/* setting each o the badges display and style*/
+.badge{
+    text-align:center;
+    font-family: 'PT Sans';
+    border:solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: antiquewhite;
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+
+    width:28%;
+
+    transition:all 0.4s;
+}
+
+/* setting the badges hover/click animation */
+
+.badge:hover, .badge:active{
+    border-color: rgb(117, 111, 102);
+
+    background-color:white;
+    transform: scale(1.3) translateY(-10px);
+}
+
+/* setting the badges section display */
+#badges-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
+
+/* setting the label class for when it's input is under focus */
+
+.focus-input{
+    top: 2px !important;
+    font-size:10px;
+}
+
+.focus-input, .focus-input + input{
+    color: #ff9100;
+}
+
+.focus-text-area, .focus-text-area + textarea{
+    color: #ff9100;
+}
+
+.focus-text-area + textarea{
+    border-color: #ff9100 !important;
+}
+/* setting the stats items style */
+
+.label-item{
+    font-size: 32px;
+    display:flex;
+    flex-flow: column nowrap;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: #a9a9a9;
+
+    padding: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+/* setting the labels bold where they are not data */
+
+.label-item label{
+    color: #ff9100;
+}
+.label-item label:not(.data){
+    font-weight: bold;
+    color: dimgray;
+}
+
+/* setting the user info textarea focus effects */
+
+#bioinfo{
+    transition: all 0.1s;
+}
+
+#bioinfo:focus{
+    border-width: 2px; 
+    border-color: black;
+    border-radius: 4px;
+}
+
+
+/* setting the first input to be invisible, just as so the username label can be tabbed at page load */
+
+#info h2+input{
+    position: absolute;
+    top:-10000000000px;
+}
+
+.incorrect{
+    background-color: rgb(216, 135, 135);
+}
+
+
+input:disabled{
+    background-color: initial;
+}
+
+#main-link, #main-link:visited{
+    color: white;
+}
+
+/* setting the responsivity for the page */
+
+/* lowering the font-size to adjust to smaller devices */
+@media screen and (max-width: 1400px){
+    
+    textarea, input, .label-item{
+        
+        font-size:24px;
+        padding-bottom: 5px;
+        
+    }
+    
+    
+}
+
+/* adjusting the layout of the main section of the page to organize its inner sections in a single column for 
+    mobile adaptation */
+
+@media screen and (max-width: 950px){
+    #main{
+        justify-content: space-between;
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    main section{
+        width:90%;
+        margin-bottom: 35px;
+        
+    }
+    main + section{
+        margin-top: 35px;
+        margin-bottom: 35px;
+        
+    }
+    
+    #stats-container{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    
+    
+    #stats-inner-container{
+        display:flex;
+
+        width: 50%;
+        
+        flex-flow: column wrap;
+    }
+}
+
+/* adjusting the stats section shape to fit extremely small screens */
+
+@media screen and (max-width: 450px){
+    #stats-container{
+        flex-flow: column nowrap;
+    }
+
+    #stats-inner-container{
+        width: 100%;
+    }
+}
