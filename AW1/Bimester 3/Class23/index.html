@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AW1 - Class 23</title>
+</head>
+<body>
+  <section id="exercises">
+    <article id="ex-01">
+      <h2>Exercise 01</h2>
+      <form onsubmit="return false;">
+        <label for="number1">Number: </label>
+        <input type="number" required min="100" max="300" id="number1" name="number1">
+        <button>Validate</button>
+      </form>
+    </article>
+    <article id="ex-02">
+      <h2>Exercise 02</h2>
+      <form onsubmit="return false;">
+        <label for="date2">Date: </label>
+        <input type="text" required pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" id="date2" name="date2">
+        <button>Transform</button>
+        <p id="result2"></p>
+      </form>
+    </article>
+  </section>
+</body>
+<script src="./index.js"></script>
+</html>

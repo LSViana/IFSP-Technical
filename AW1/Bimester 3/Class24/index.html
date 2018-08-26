@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class 24</title>
+</head>
+
+<body>
+  <section id="exercises">
+    <article id="ex1">
+      <h3>Exercise 1</h3>
+      <div>
+        <label for="ex1.number">Value</label>
+        <input type="number" name="ex1.number" id="ex1.number" min="100" max="300">
+        <input type="button" value="Validate" id="ex1.button">
+      </div>
+      <span id="ex1.answer"></span>
+    </article>
+    <article id="ex2">
+      <h3>Exercise 2</h3>
+      <div>
+        <label for="ex2.number">Value</label>
+        <input type="text" name="ex2.number" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" id="ex2.number">
+        <input type="button" value="Format" id="ex2.button">
+      </div>
+      <span id="ex2.answer"></span>
+    </article>
+    <article id="ex3">
+      <h3>Exercise 3</h3>
+      <div>
+        <label for="ex3.mass">Mass (kg)</label>
+        <input type="number" name="ex3.mass" id="ex3.mass" min="10" max="200">
+        <label for="ex3.height">Height (m)</label>
+        <input type="number" name="ex3.height" id="ex3.height" min="1" max="3">
+        <label for="ex3.genre">Genre</label>
+        <select name="ex3.genre" id="ex3.genre">
+          <option value="masculine">Masculine</option>
+          <option value="feminine">Feminine</option>
+        </select>
+        <input type="button" value="Calculate" id="ex3.button">
+      </div>
+      <span id="ex3.answer"></span>
+    </article>
+    <article id="ex4">
+      <h3>Exercise 4</h3>
+      <div>
+        <label for="ex4.cpf">Value</label>
+        <input type="text" name="ex4.cpf" pattern="[0-9]{11}" id="ex4.cpf">
+        <input type="button" value="Calculate" id="ex4.button">
+      </div>
+      <span id="ex4.answer"></span>
+    </article>
+    <article id="ex5">
+      <h3>Exercise 5</h3>
+      <div>
+        <h4>Values</h4>
+        <label for="ex5.loan">Loan Value</label>
+        <input type="number" name="ex5.loan" id="ex5.loan">
+        <label for="ex5.installments">Installments amount</label>
+        <input type="number" name="ex5.installments" id="ex5.installments">
+        <label for="ex5.interest">Monthly interest</label>
+        <input type="number" name="ex5.interest" id="ex5.interest" min="0" max="100">
+        <input type="button" value="Calculate" id="ex5.button">
+      </div>
+      <div>
+        <h4>Results</h4>
+        <table>
+          <thead>
+            <th>Month</th>
+            <th>Balance due</th>
+            <th>Amortization</th>
+            <th>Interest</th>
+            <th>Installment</th>
+          </thead>
+          <tbody id="ex5.tbody">
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+</body>
+<script src="./index.js"></script>
+
+</html>
