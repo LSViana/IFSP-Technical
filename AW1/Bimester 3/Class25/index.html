@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class 25</title>
+</head>
+
+<body>
+  <h1>AW1 Exercises</h1>
+  <section>
+    <article id="ex1">
+      <h3>Exercise 1</h3>
+      <form>
+        <label for="ex1.name">Name</label>
+        <input type="text" name="name" id="ex1.name">
+      </form>
+      <span id="ex1.message"></span>
+    </article>
+    <article id="ex2">
+      <h3>Exercise 2</h3>
+      <span id="ex2.message"></span>
+    </article>
+    <article id="ex3">
+      <h3>Exercise 3</h3>
+      <span>Randomly Generated CPF: </span>
+      <span id="ex3.cpf"></span>
+    </article>
+    <article id="ex4">
+      <h3>Exercise 4</h3>
+      <form>
+        <label for="ex4.cpf">
+          Type a CPF:
+        </label>
+        <input type="text" name="cpf" id="ex4.cpf" pattern="[0-9]{11}">
+        <input type="button" value="Validate" id="ex4.button">
+      </form>
+      <span id="ex4.answer"></span>
+    </article>
+    <article id="ex5">
+      <h3>Exercise 5</h3>
+      <form>
+        <label for="ex5.salary">
+          Total Salary
+        </label>
+        <input type="number" name="salary" id="ex5.salary" value="10000">
+        <label for="ex5.dependents">
+          Dependents
+        </label>
+        <input type="number" name="dependents" id="ex5.dependents" value="0">
+        <label for="ex5.othercharges">
+          Other Charges
+        </label>
+        <input type="number" name="dependents" id="ex5.othercharges" value="0">
+        <input type="button" value="Calculate" id="ex5.button">
+      </form>
+      <table>
+        <thead>
+          <th>Description</th>
+          <th>References</th>
+          <th>Revenues</th>
+          <th>Charges</th>
+        </thead>
+        <tbody id="ex5.tbody">
+
+        </tbody>
+      </table>
+    </article>
+  </section>
+</body>
+<script src="./index.js"></script>
+
+</html>
