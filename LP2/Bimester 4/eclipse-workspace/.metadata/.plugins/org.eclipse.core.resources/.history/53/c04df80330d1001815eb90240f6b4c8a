@@ -1,0 +1,49 @@
+package ifsp.lp2.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class DiceRoller
+ */
+@WebServlet("/DiceRoller")
+public class DiceRoller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private static final String dice1 = "dice-1.png";
+	private static final String dice2 = "dice-2.png";
+	private static final String dice3 = "dice-3.png";
+	private static final String dice4 = "dice-4.png";
+	private static final String dice5 = "dice-5.png";
+	private static final String dice6 = "dice-6.png";
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public DiceRoller() {
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter writer = response.getWriter();
+		//
+		String userGuessStr = request.getParameter("userGuess");
+		try {
+			Integer.parseInt(userGuessStr)
+		} catch (Exception e) {
+			writer.write("Invalid number, try again!");
+		}
+		finally {
+			writer.flush();
+		}
+	}
+
+}

@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow: hidden;
+}
+
+#root {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+}
+
+#landscape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#car {
+    position: absolute;
+    left: calc(48.7vw);
+    top: calc(65.4vh);
+    width: 40px;
+
+    /* left: calc(37.3vw);
+        top: calc(56.4vh);
+        width: 1083px; */
+
+    animation: car-coming 2s ease-in-out;
+}
+
+@keyframes car-coming {
+    0% {
+        left: calc(48.7vw);
+        top: calc(65.4vh);
+        width: 40px;
+    }
+    33% {
+        left: calc(45.7vw);
+        top: calc(63.4vh);
+        width: 131px;
+    }
+    66% {
+        left: calc(40.3vw);
+        top: calc(59.4vh);
+        width: 292px;
+    }
+    100% {
+        left: calc(1.3vw);
+        top: calc(39.4vh);
+        width: 1459px;
+    }
+}
