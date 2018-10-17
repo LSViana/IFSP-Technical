@@ -1,0 +1,198 @@
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\ApplicationInsights.config
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\HostMaker.dll.config
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\HostMaker.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\HostMaker.pdb
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\csc.exe
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\csc.exe.config
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\csc.rsp
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\csi.exe
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\csi.exe.config
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\csi.rsp
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.AppContext.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Console.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.IO.Compression.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.IO.Pipes.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.Claims.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Threading.Thread.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.ValueTuple.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Xml.XPath.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\vbc.exe
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\vbc.exe.config
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\vbc.rsp
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\VBCSCompiler.exe
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Antlr3.Runtime.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\EntityFramework.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\EntityFramework.SqlServer.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.Web.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.ApplicationInsights.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Newtonsoft.Json.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Helpers.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Mvc.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Optimization.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Razor.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.WebPages.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.WebPages.Razor.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\WebGrease.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\EntityFramework.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\EntityFramework.SqlServer.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Helpers.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Mvc.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Optimization.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.Razor.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.WebPages.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Web.WebPages.Razor.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Newtonsoft.Json.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Antlr3.Runtime.pdb
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.AI.Web.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lv201\source\repos\HostMaker\HostMaker\obj\Debug\HostMaker.csprojAssemblyReference.cache
+C:\Users\lv201\source\repos\HostMaker\HostMaker\obj\Debug\HostMaker.csproj.CoreCompileInputs.cache
+C:\Users\lv201\source\repos\HostMaker\HostMaker\obj\Debug\HostMaker.csproj.CopyComplete
+C:\Users\lv201\source\repos\HostMaker\HostMaker\obj\Debug\HostMaker.dll
+C:\Users\lv201\source\repos\HostMaker\HostMaker\obj\Debug\HostMaker.pdb
+C:\Users\Lucas Viana\Downloads\Aula19_LucasViana\HostMaker\obj\Debug\HostMaker.dll
+C:\Users\Lucas Viana\Downloads\Aula19_LucasViana\HostMaker\obj\Debug\HostMaker.pdb
+C:\Users\Lucas Viana\Downloads\Aula20_LucasViana\HostMaker\obj\Debug\HostMaker.dll
+C:\Users\Lucas Viana\Downloads\Aula20_LucasViana\HostMaker\obj\Debug\HostMaker.pdb
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\obj\Debug\HostMaker.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\obj\Debug\HostMaker.pdb
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\ApplicationInsights.config
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\HostMaker.dll.config
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\HostMaker.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\HostMaker.pdb
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\csc.exe
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\csc.exe.config
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\csc.rsp
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\csi.exe
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\csi.exe.config
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\csi.rsp
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.AppContext.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Console.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.IO.Compression.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.Claims.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.ValueTuple.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\vbc.exe
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\vbc.exe.config
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\vbc.rsp
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\VBCSCompiler.exe
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Antlr3.Runtime.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\EntityFramework.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\EntityFramework.SqlServer.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.Web.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Newtonsoft.Json.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Helpers.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Mvc.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Optimization.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Razor.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.WebPages.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.WebPages.Razor.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\WebGrease.dll
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Antlr3.Runtime.pdb
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\EntityFramework.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\EntityFramework.SqlServer.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.Web.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\Newtonsoft.Json.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Helpers.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Mvc.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Optimization.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.Razor.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.WebPages.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\bin\System.Web.WebPages.Razor.xml
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\obj\Debug\HostMaker.csprojAssemblyReference.cache
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\obj\Debug\HostMaker.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Viana\source\IFSP-Technical\LP3\Class20\HostMaker\obj\Debug\HostMaker.csproj.CopyComplete

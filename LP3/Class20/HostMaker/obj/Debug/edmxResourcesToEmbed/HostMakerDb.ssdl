@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HostMakerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HostMakerModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="HostMakerModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cities" EntityType="HostMakerModel.Store.Cities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Establishments" EntityType="HostMakerModel.Store.Establishments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rooms" EntityType="HostMakerModel.Store.Rooms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RoomKinds" EntityType="HostMakerModel.Store.RoomKinds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="HostMakerModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Establishment_Category" Association="HostMakerModel.Store.FK_Establishment_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Establishment" EntitySet="Establishments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Establishment_City" Association="HostMakerModel.Store.FK_Establishment_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Establishment" EntitySet="Establishments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Room_Establishment" Association="HostMakerModel.Store.FK_Room_Establishment">
+      <End Role="Establishment" EntitySet="Establishments" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Room_RoomKind" Association="HostMakerModel.Store.FK_Room_RoomKind">
+      <End Role="RoomKind" EntitySet="RoomKinds" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FederativeUnit" Type="char" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Establishments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdCity" Type="int" Nullable="false" />
+    <Property Name="IdCategory" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Telephone" Type="varchar" Nullable="false" MaxLength="11" />
+    <Property Name="Site" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="IdEstablishment" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdRoomKind" Type="int" Nullable="false" />
+    <Property Name="Available" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoomKinds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="DailyCost" Type="float" Nullable="false" />
+    <Property Name="Breakfast" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Login" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Establishment_Category">
+    <End Role="Category" Type="HostMakerModel.Store.Categories" Multiplicity="1" />
+    <End Role="Establishment" Type="HostMakerModel.Store.Establishments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Establishment">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Establishment_City">
+    <End Role="City" Type="HostMakerModel.Store.Cities" Multiplicity="1" />
+    <End Role="Establishment" Type="HostMakerModel.Store.Establishments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Establishment">
+        <PropertyRef Name="IdCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Room_Establishment">
+    <End Role="Establishment" Type="HostMakerModel.Store.Establishments" Multiplicity="1" />
+    <End Role="Room" Type="HostMakerModel.Store.Rooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Establishment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="IdEstablishment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Room_RoomKind">
+    <End Role="RoomKind" Type="HostMakerModel.Store.RoomKinds" Multiplicity="1" />
+    <End Role="Room" Type="HostMakerModel.Store.Rooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomKind">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="IdRoomKind" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

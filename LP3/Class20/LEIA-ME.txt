@@ -1,0 +1,1 @@
+As labels nas páginas Index ainda estão com o método DisplayNameFor porque eu adicionei annotations nas classes Model para deixá-las em português, como pode ser visto ao executar o projeto

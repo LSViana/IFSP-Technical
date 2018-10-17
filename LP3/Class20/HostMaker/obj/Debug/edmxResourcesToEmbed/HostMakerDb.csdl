@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HostMakerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Establishments" Relationship="Self.FK_Establishment_Category" FromRole="Category" ToRole="Establishment" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FederativeUnit" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Establishments" Relationship="Self.FK_Establishment_City" FromRole="City" ToRole="Establishment" />
+  </EntityType>
+  <EntityType Name="Establishment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="IdCity" Type="Int32" Nullable="false" />
+    <Property Name="IdCategory" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Site" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Establishment_Category" FromRole="Establishment" ToRole="Category" />
+    <NavigationProperty Name="City" Relationship="Self.FK_Establishment_City" FromRole="Establishment" ToRole="City" />
+    <NavigationProperty Name="Rooms" Relationship="Self.FK_Room_Establishment" FromRole="Establishment" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="IdEstablishment" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="IdRoomKind" Type="Int32" Nullable="false" />
+    <Property Name="Available" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Establishment" Relationship="Self.FK_Room_Establishment" FromRole="Room" ToRole="Establishment" />
+    <NavigationProperty Name="RoomKind" Relationship="Self.FK_Room_RoomKind" FromRole="Room" ToRole="RoomKind" />
+  </EntityType>
+  <EntityType Name="RoomKind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DailyCost" Type="Double" Nullable="false" />
+    <Property Name="Breakfast" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Rooms" Relationship="Self.FK_Room_RoomKind" FromRole="RoomKind" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Establishment_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Establishment" Type="Self.Establishment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Establishment">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Establishment_City">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="Establishment" Type="Self.Establishment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Establishment">
+        <PropertyRef Name="IdCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Room_Establishment">
+    <End Role="Establishment" Type="Self.Establishment" Multiplicity="1" />
+    <End Role="Room" Type="Self.Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Establishment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="IdEstablishment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Room_RoomKind">
+    <End Role="RoomKind" Type="Self.RoomKind" Multiplicity="1" />
+    <End Role="Room" Type="Self.Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomKind">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="IdRoomKind" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HostMakerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="Establishments" EntityType="Self.Establishment" />
+    <EntitySet Name="Rooms" EntityType="Self.Room" />
+    <EntitySet Name="RoomKinds" EntityType="Self.RoomKind" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Establishment_Category" Association="Self.FK_Establishment_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Establishment" EntitySet="Establishments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Establishment_City" Association="Self.FK_Establishment_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Establishment" EntitySet="Establishments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Room_Establishment" Association="Self.FK_Room_Establishment">
+      <End Role="Establishment" EntitySet="Establishments" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Room_RoomKind" Association="Self.FK_Room_RoomKind">
+      <End Role="RoomKind" EntitySet="RoomKinds" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

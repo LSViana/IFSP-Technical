@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HostMakerModelStoreContainer" CdmEntityContainer="HostMakerEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(HostMakerModel.Category)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="IsTypeOf(HostMakerModel.City)">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FederativeUnit" ColumnName="FederativeUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Establishments">
+      <EntityTypeMapping TypeName="IsTypeOf(HostMakerModel.Establishment)">
+        <MappingFragment StoreEntitySet="Establishments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+          <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="IsTypeOf(HostMakerModel.Room)">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEstablishment" ColumnName="IdEstablishment" />
+          <ScalarProperty Name="IdRoomKind" ColumnName="IdRoomKind" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomKinds">
+      <EntityTypeMapping TypeName="IsTypeOf(HostMakerModel.RoomKind)">
+        <MappingFragment StoreEntitySet="RoomKinds">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DailyCost" ColumnName="DailyCost" />
+          <ScalarProperty Name="Breakfast" ColumnName="Breakfast" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(HostMakerModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
