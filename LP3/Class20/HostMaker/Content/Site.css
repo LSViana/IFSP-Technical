@@ -22,3 +22,25 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.partner-image {
+    height: 80px;
+    width: 80px;
+}
+
+/*.flex-container::before {
+    content: 'Nossos Parceiros';
+    font-variant: small-caps;
+    color: dimgray;
+}*/
+
+.flex-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > div {
+    margin: 10px;
+}

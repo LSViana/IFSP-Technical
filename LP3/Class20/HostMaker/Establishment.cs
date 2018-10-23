@@ -36,8 +36,10 @@ namespace HostMaker
         public string Telephone { get; set; }
         [Display(Name = "Site")]
         public string Site { get; set; }
-    
+
+        [Display(Name = "Categoria")]
         public virtual Category Category { get; set; }
+        [Display(Name = "Cidade")]
         public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Rooms { get; set; }

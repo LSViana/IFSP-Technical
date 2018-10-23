@@ -2,10 +2,15 @@
     ViewBag.Title = "Home Page";
 }
 
+<p style="margin: 10px">
+    @Html.ShowAdvertisement()
+</p>
+@Html.ShowFamousPartnerImages()
+
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
+    <h1>Pesquise os melhores hotéis</h1>
     <p class="lead">HostMaker is done using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Descubra &raquo;</a></p>
+    <p><a href="Home/Search" class="btn btn-success btn-lg">Pesquisar &raquo;</a></p>
 </div>
 
 <div class="row">
