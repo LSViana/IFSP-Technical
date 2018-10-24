@@ -1,0 +1,39 @@
+﻿@model IEnumerable<RoomsByEstablishment>
+
+@{
+    ViewBag.Title = "RoomKindQuery";
+}
+
+<h2>Quartos separados pelo Tipo selecionado e Estabelecimento</h2>
+
+
+@foreach (var item in Model) {
+    <h1>
+        @item.EstablishmentName
+        <div class="alert alert-success" style="margin: 12px">
+            <ul style="list-style: none; display: flex; align-items: center; flex-flow: column">
+                @foreach (var room in @item.Rooms)
+                {
+                <li style="display: flex; flex-flow: row; flex-wrap: wrap; margin: 12px 0px">
+                    <div>
+                        <p style="font-size: .4em">Número do Quarto</p>
+                        <p style="text-align: center">@room.Id</p>
+                    </div>
+                    <div style="width: 2px; margin: 0px 20px; background-color: green"></div>
+                    <div>
+                        <p style="font-size: .4em">Tipo do Quarto</p>
+                        <p style="text-align: center">@room.RoomKind.Description</p>
+                    </div>
+                    <div style="width: 2px; margin: 0px 20px; background-color: green"></div>
+                    <div style="display: flex; flex-flow: column; align-items: center; justify-content: space-between">
+                        <p style="font-size: .4em">Disponível</p>
+                        <input type="checkbox" style="text-align: center; margin-bottom: 24px" @(room.Available ? "checked" : "") disabled>
+                    </div>
+                </li>
+                }
+            </ul>
+        </div>
+    </h1>
+}
+
+</table>

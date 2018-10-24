@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Consultas disponíveis em HostMaker</h2>
+
+<div>
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Quartos por Tipo de Quarto", "RoomKind", "Query")</li>
+                <li>@Html.ActionLink("Detalhes dos Quartos ", "RoomDetails", "Query")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+

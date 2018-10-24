@@ -177,6 +177,7 @@
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\EstablishmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QueryController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\RoomKindController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -187,6 +188,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HostMakerHelpers.cs" />
+    <Compile Include="Helpers\RoomsByEstablishment.cs" />
     <Compile Include="HostMakerDb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -325,6 +327,10 @@
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Query\Index.cshtml" />
+    <Content Include="Views\Query\RoomDetails.cshtml" />
+    <Content Include="Views\Query\RoomKind.cshtml" />
+    <Content Include="Views\Query\RoomKindQuery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

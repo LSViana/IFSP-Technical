@@ -1,0 +1,49 @@
+﻿@model IEnumerable<HostMaker.Room>
+
+@{
+    ViewBag.Title = "RoomDetails";
+}
+
+<h2>RoomDetails</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Available)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Establishment.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomKind.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomKind.DailyCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomKind.Breakfast)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Available)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Establishment.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomKind.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomKind.DailyCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomKind.Breakfast)
+        </td>
+    </tr>
+}
+
+</table>
