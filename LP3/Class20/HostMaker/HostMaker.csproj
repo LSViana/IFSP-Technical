@@ -173,6 +173,7 @@
     <Compile Include="City.cs">
       <DependentUpon>HostMakerDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\EstablishmentController.cs" />
@@ -184,9 +185,11 @@
     <Compile Include="Establishment.cs">
       <DependentUpon>HostMakerDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Filters\AuthenticationFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ControllerHelper.cs" />
     <Compile Include="Helpers\HostMakerHelpers.cs" />
     <Compile Include="Helpers\RoomsByEstablishment.cs" />
     <Compile Include="HostMakerDb.Context.cs">
@@ -204,6 +207,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HostMakerDb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\BaseController.cs" />
     <Compile Include="Models\Metadata\CategoryMetadata.cs" />
     <Compile Include="Models\Metadata\CityMetadata.cs" />
     <Compile Include="Models\Metadata\EstablishmentMetadata.cs" />
@@ -211,6 +215,8 @@
     <Compile Include="Models\Metadata\RoomMetadata.cs" />
     <Compile Include="Models\Metadata\UserMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Authentication\CookieManager.cs" />
+    <Compile Include="Repositories\Authentication\UserManager.cs" />
     <Compile Include="Room.cs">
       <DependentUpon>HostMakerDb.tt</DependentUpon>
     </Compile>
@@ -220,6 +226,7 @@
     <Compile Include="User.cs">
       <DependentUpon>HostMakerDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Credentials.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -331,6 +338,7 @@
     <Content Include="Views\Query\RoomDetails.cshtml" />
     <Content Include="Views\Query\RoomKind.cshtml" />
     <Content Include="Views\Query\RoomKindQuery.cshtml" />
+    <Content Include="Views\Authentication\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

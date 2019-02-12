@@ -28,6 +28,10 @@
                     <li>@Html.ActionLink("Quartos", "Index", "Room")</li>
                     <li>@Html.ActionLink("Usuários", "Index", "User")</li>
                     <li>@Html.ActionLink("Consultas", "Index", "Query")</li>
+                    @if (ViewBag.Authenticated != null && ViewBag.Authenticated != false)
+                    {
+                        <li class="text-info font-weight-bold">@Html.ActionLink("Logout", "Logout", "Authentication")</li>
+                    }
                 </ul>
             </div>
         </div>

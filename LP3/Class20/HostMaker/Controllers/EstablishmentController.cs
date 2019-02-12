@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HostMaker.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Web.Mvc;
 
 namespace HostMaker.Controllers
 {
-    public class EstablishmentController : Controller
+    public class EstablishmentController : BaseController
     {
         private HostMakerEntities db = new HostMakerEntities();
 

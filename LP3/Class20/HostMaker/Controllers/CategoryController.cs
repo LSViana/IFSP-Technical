@@ -4,10 +4,11 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HostMaker.Infrastructure;
 
 namespace HostMaker.Controllers
 {
-    public class CategoryController : Controller
+    public class CategoryController : BaseController
     {
         private HostMakerEntities db = new HostMakerEntities();
 
