@@ -19,8 +19,12 @@
 
             // Using variables
             $x = 5;
+
+            // Keep clear that variable names are case sensitive
+            $X = 3;
+
             echo $x;
-            Echo $x;
+            Echo $X;
             ECHo $x;
         ?>
     </body>
