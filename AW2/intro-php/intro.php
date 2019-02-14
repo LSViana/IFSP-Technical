@@ -15,7 +15,11 @@
             */
 
             // Partial line comment
-            echo /* this is ignored :) */ "Greetings, universe!";
+            echo /* this is ignored :) */ "Greetings, universe! ";
+
+            // Using variables
+            $x = 5;
+            echo $x;
         ?>
     </body>
 </html>
