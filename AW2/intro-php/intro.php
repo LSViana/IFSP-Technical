@@ -26,6 +26,9 @@
             echo $x;
             Echo $X;
             ECHo $x;
+
+            // Using undefined variables throw warnings
+            echo $y;
         ?>
     </body>
 </html>
