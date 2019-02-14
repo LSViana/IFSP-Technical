@@ -6,7 +6,16 @@
         </h1>
 
         <?php
-            echo "Greetings, universe!";
+            // Single line comment
+
+            # Single line comment
+
+            /*
+                Multiple line comment
+            */
+
+            // Partial line comment
+            echo /* this is ignored :) */ "Greetings, universe!";
         ?>
     </body>
 </html>
