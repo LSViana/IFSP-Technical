@@ -20,6 +20,8 @@
             // Using variables
             $x = 5;
             echo $x;
+            Echo $x;
+            ECHo $x;
         ?>
     </body>
 </html>
