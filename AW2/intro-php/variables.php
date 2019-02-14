@@ -22,4 +22,10 @@
 
     // Operating text and numbers
     echo ($x + $y); // "3" + 4 = 7
+
+    echo ' @ ';
+
+    // Output variables in PHP through echo
+    $bestSchool = "SENAI Informática";
+    echo "I love/like/adore/want " . $bestSchool . "!"; // Instead of (+), use (.) to concatenate strings
 ?>
