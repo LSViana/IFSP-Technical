@@ -1,5 +1,6 @@
 :root {
     --margin-base: 4px;
+    --padding-base: var(--margin-base);
 }
 
 * {
@@ -16,6 +17,10 @@ a {
 
 .d-flex {
     display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .flex-row {
@@ -53,3 +58,17 @@ a {
 .ml-1 { margin-left: calc(var(--margin-base) * 1); }
 .ml-2 { margin-left: calc(var(--margin-base) * 2); }
 .ml-3 { margin-left: calc(var(--margin-base) * 3); }
+
+.ma-1 { margin: calc(var(--margin-base) * 1); }
+.ma-2 { margin: calc(var(--margin-base) * 2); }
+.ma-3 { margin: calc(var(--margin-base) * 3); }
+.ma-4 { margin: calc(var(--margin-base) * 4); }
+.ma-5 { margin: calc(var(--margin-base) * 5); }
+.ma-6 { margin: calc(var(--margin-base) * 6); }
+
+.pa-1 { padding: calc(var(--padding-base) * 1); }
+.pa-2 { padding: calc(var(--padding-base) * 2); }
+.pa-3 { padding: calc(var(--padding-base) * 3); }
+.pa-4 { padding: calc(var(--padding-base) * 4); }
+.pa-5 { padding: calc(var(--padding-base) * 5); }
+.pa-6 { padding: calc(var(--padding-base) * 6); }
