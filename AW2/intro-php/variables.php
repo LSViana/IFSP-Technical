@@ -28,4 +28,8 @@
     // Output variables in PHP through echo
     $bestSchool = "SENAI Informática";
     echo "I love/like/adore/want " . $bestSchool . "!"; // Instead of (+), use (.) to concatenate strings
+
+    // Interpolation of strings can happen in two ways:
+    echo "Interpolate: " . $x . " (Concatenation)";
+    echo "Interpolate: $x (Regular string)";
 ?>
