@@ -2,6 +2,18 @@
 
 * {
     font-family: 'Laila';
+    user-select: none;
+}
+
+*::selection {
+    color: orange;
+    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
 }
 
 .top-bar {
@@ -9,16 +21,9 @@
     padding: 0px;
     margin: 0px;
     height: 64px;
-}
-
-.top-bar::before {
-    content: ' ';
-    background: red;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    /* transform: translateY(-8px); */
-    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .center-badge {
@@ -27,6 +32,7 @@
     background: orange;
     border-radius: 50%;
     transform: translateY(-8px);
+    z-index: 1;
 }
 
 .center-badge img {
@@ -34,11 +40,11 @@
 }
 
 .side-menu {
+    width: 30%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 0px 8px;
 }
 
 .side-menu h3 {
@@ -46,4 +52,12 @@
     text-transform: uppercase;
     font-weight: lighter;
     font-family: 'Patua One';
+    padding: 8px 16px;
+    border-radius: 10e6px;
+    transition: background-color .3s, color .3s;
+}
+
+.side-menu h3:hover {
+    color: rgb(255, 193, 78);
+    background-color: black;
 }

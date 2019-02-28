@@ -1,0 +1,68 @@
+.dogs {
+    padding: 96px;
+}
+
+.dogs span {
+    color: black;
+    background-color: rgb(255, 193, 78);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.dogs-helped {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.dog-helped {
+    flex-grow: calc(1/3);
+    margin: 8px;
+    padding: 16px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.205);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.dog-helped h3 {
+    font-family: 'Patua One';
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+.dog-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    margin: 4px 0px;
+}
+
+.dog-info p {
+    margin-right: 4px;
+}
+
+.dog-info > div {
+    margin-right: 4px;
+    background: rgb(255, 193, 78);
+    color: black;
+    border-radius: 8px;
+    padding: 2px 8px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.dog-helped .image-container {
+    align-self: center;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.dog-helped .image-container img {
+    height: 100%;
+}

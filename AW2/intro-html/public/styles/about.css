@@ -1,0 +1,90 @@
+.about-container {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+}
+
+.about-card {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.733);
+    border-radius: 4px;
+    margin-top: 72px;
+    height: 85%;
+    max-width: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.about-card * {
+    font-family: 'Patua One';
+    font-weight: lighter;
+    font-size: 1.4em;
+}
+
+.about-card .about-tile {
+    margin: 8px;
+    display: flex;
+    flex-flow: column;
+}
+
+.about-card .about-tile span {
+    color: rgb(255, 193, 78);
+    font-size: 1em;
+}
+
+.about-card .about-tile h4 {
+    font-family: 'Laila';
+    font-size: 1em;
+}
+
+.about-card .about-tile .about-detail {
+    margin-top: 32px;
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.about-card .about-tile .about-detail p {
+    font-size: .8em;
+    font-family: 'Laila';
+    font-weight: bold;
+}
+
+.about-card .about-tile .about-detail .image-container {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    max-height: 100%;
+    background: rgb(199, 199, 199);
+    z-index: -1;
+}
+
+.background-image img {
+    opacity: .3;
+    filter: hue-rotate(-4deg) contrast(1.2) grayscale(1);
+}
+
+.background-image .color-container {
+    background-color: rgb(255, 193, 78);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    opacity: .5;
+    transform: rotate(10deg) translateX(49%);
+}

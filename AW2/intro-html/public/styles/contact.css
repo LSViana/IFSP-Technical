@@ -1,0 +1,59 @@
+.contact-container {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+}
+
+.contact-card {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.733);
+    border-radius: 4px;
+    margin-top: 72px;
+    height: 85%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.contact-card * {
+    font-family: 'Patua One';
+    font-weight: lighter;
+    font-size: 1.4em;
+}
+
+.contact-card .contact-tile {
+    margin: 8px;
+}
+
+.contact-card .contact-tile h4 {
+    font-family: 'Laila';
+    font-size: 1em;
+}
+
+.background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    background: rgb(199, 199, 199);
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    opacity: .3;
+    filter: hue-rotate(-4deg) contrast(1.2) grayscale(1);
+}
+
+.background-image .color-container {
+    background-color: rgb(255, 193, 78);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    opacity: .5;
+    transform: rotate(10deg) translateX(49%);
+}
