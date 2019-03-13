@@ -1,21 +1,16 @@
 <?php
-    header("Content-Type: application/json");
+    function execute2($sideA, $sideB, $sideC) {
+        $triangleType = "";
 
-    // All the inputs for this exercise come from the URL
-    $sideA = $_GET["a"];
-    $sideB = $_GET["b"];
-    $sideC = $_GET["c"];
+        if($sideA > ($sideB + $sideC))
+            $triangleType = "not a triangle";
+        else if($sideA == $sideB && $sideB == $sideC)
+            $triangleType = "equilateral";
+        else if(($sideA == $sideB) || ($sideA == $sideC) || ($sideB == $sideC))
+            $triangleType = "isosceles";
+        else
+            $triangleType = "scalene";
 
-    $triangleType = "";
-
-    if($sideA > ($sideB + $sideC))
-        $triangleType = "not a triangle";
-    else if($sideA == $sideB && $sideB == $sideC)
-        $triangleType = "equilateral";
-    else
-        $triangleType = "isosceles";
-    
-    echo json_encode(array(
-        "result" => $triangleType,
-    ));
+        return $triangleType;
+    }
 ?>

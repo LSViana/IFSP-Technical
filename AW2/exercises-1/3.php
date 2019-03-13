@@ -1,9 +1,4 @@
 <?php
-    header("Content-Type: application/json");
-
-    // The number to be written comes from the URL
-    $number = $_GET["number"];
-
     // Constants
     $zero = "zero";
 
@@ -110,7 +105,7 @@
         return $text;
     }
 
-    echo json_encode([
-        "text" => numberToText($number)
-    ]);
+    function execute3(int $number) {
+        return numberToText($number);
+    }
 ?>

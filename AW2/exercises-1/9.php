@@ -1,24 +1,21 @@
 <?php
-    header("Content-Type: application/json");
+    function execute9(array $values) {
+        $total = 0.0;
+        $count = 0;
 
-    $values = json_decode($_GET["values"]);
-    $total = 0.0;
-    $count = 0;
-
-    for($i = 0; $i < count($values); $i++) {
-        $value = $values[$i];
-        
-        if($value >= 0) {
-            $count++;
-            $total += $value;
+        for($i = 0; $i < count($values); $i++) {
+            $value = $values[$i];
+            
+            if($value >= 0) {
+                $count++;
+                $total += $value;
+            }
+            else
+                break;
         }
-        else
-            break;
+
+        $average = $total / $count;
+        
+        return $average;
     }
-
-    $average = $total / $count;
-
-    echo json_encode([
-        "average" => $average
-    ]);
 ?>

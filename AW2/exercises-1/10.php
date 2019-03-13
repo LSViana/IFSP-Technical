@@ -1,30 +1,27 @@
 <?php
-    header("Content-Type: application/json");
+    function execute10(array $grades) {
+        $highestGradeIndex = 0;
+        $lowestGradeIndex = 0;
 
-    // Input values come from the URL
-    $grades = json_decode($_GET["grades"]);
-
-    $highestGradeIndex = 0;
-    $lowestGradeIndex = 0;
-
-    $index = 0;
-    foreach($grades as $grade) {
-        if($grade->grade > $grades[$highestGradeIndex]->grade) {
-            $highestGradeIndex = $index;
+        $index = 0;
+        foreach($grades as $grade) {
+            if($grade->grade > $grades[$highestGradeIndex]->grade) {
+                $highestGradeIndex = $index;
+            }
+            else if($grade->grade < $grades[$lowestGradeIndex]->grade) {
+                $lowestGradeIndex = $index;
+            }
+            $index++;
         }
-        else if($grade->grade < $grades[$lowestGradeIndex]->grade) {
-            $lowestGradeIndex = $index;
-        }
-        $index++;
+
+        $highestGrade = $grades[$highestGradeIndex];
+        $lowestGrade = $grades[$lowestGradeIndex];
+
+        return [
+            "highest" => $highestGrade,
+            "lowest" => $lowestGrade,
+        ];
     }
-
-    $highestGrade = $grades[$highestGradeIndex];
-    $lowestGrade = $grades[$lowestGradeIndex];
-
-    echo json_encode([
-        "highest" => $highestGrade,
-        "lowest" => $lowestGrade,
-    ]);
 
     // Test JSON
     /*

@@ -1,1 +1,0 @@
-Todos os exercícios foram resolvidos em inglês por boa prática, além disso nenhum deles possui formulário ou algo do tipo, preferi a abordagem de receber valores pela URL e retorná-los como JSON, que realmente me adicionou um novo conhecimento, pois desta maneira pude exercer meus conhecimentos de PHP e não de HTML, espero que seja uma maneira válida de resolver os exercícios.

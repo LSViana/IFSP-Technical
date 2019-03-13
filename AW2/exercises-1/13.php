@@ -1,16 +1,13 @@
 <?php
-    header("Content-Type: application/json");
+    function execute13($number) {
+        $result = 0;
 
-    // The input number comes from the URL
-    $number = intval($_GET["number"]);
-
-    $result = 0;
-
-    for ($i = 1; $i <= $number; $i++) { 
-        $result += $i;
+        for ($i = 1; $i <= $number; $i++) { 
+            $result += $i;
+        }
+    
+        return [
+            "result" => $result,
+        ];
     }
-
-    echo json_encode([
-        "result" => $result,
-    ]);
 ?>
