@@ -25,5 +25,7 @@
         }
     
         orderArray($values, $increasing);
+
+        return $values;
     }
 ?>

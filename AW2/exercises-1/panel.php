@@ -32,68 +32,92 @@
     ];
 
     $result["3"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute3(573)",
+        "result" => execute3(573),
     ];
 
     $result["4"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute4(10, 5)",
+        "result" => execute4(10, 5),
     ];
 
     $result["5"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute5(1, 7, 3, 2)",
+        "result" => execute5(1, 7, 3, 2),
     ];
 
     $result["6"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute6(2100, 300)",
+        "result" => execute6(2100, 300),
     ];
 
     $result["7"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute7(19)",
+        "result" => execute7(19),
     ];
 
     $result["8"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute8(4, 3)",
+        "result" => execute8(4, 3),
     ];
 
     $result["9"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute9([ 1, 2, 3, 4, 5, -1, 6 ])",
+        "result" => execute9([ 1, 2, 3, 4, 5, -1, 6 ]),
     ];
 
     $result["10"] = [
-        "code" => "",
-        "result" => "",
+        "code" => 'execute10([(object)["name"=>"Lucas Viana","grade"=>10.0,],(object)["name"=>"Roberto Bolgheroni","grade"=>9.0,],(object)["name"=>"Matheus Moreira","grade"=>6.0,],(object)["name"=>"Pedro Splugues","grade"=>7.0,],(object)["name"=>"Vitor Maia","grade"=>8.0,],])',
+        "result" => execute10([
+            (object) [
+                "name" => "Lucas Viana",
+                "grade" => 10.0,
+            ],
+            (object) [
+                "name" => "Roberto Bolgheroni",
+                "grade" => 9.0,
+            ],
+            (object) [
+                "name" => "Matheus Moreira",
+                "grade" => 6.0,
+            ],
+            (object) [
+                "name" => "Pedro Splugues",
+                "grade" => 7.0,
+            ],
+            (object) [
+                "name" => "Vitor Maia",
+                "grade" => 8.0,
+            ],
+        ]),
     ];
 
     $result["11"] = [
-        "code" => "",
-        "result" => "",
+        "code" => 'execute11(["C"=>2,"R"=>3,])',
+        "result" => execute11([
+            "C" => 2,
+            "R" => 3,
+        ]),
     ];
 
     $result["12"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute12(13)",
+        "result" => execute12(13),
     ];
 
     $result["13"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute13(5)",
+        "result" => execute13(5),
     ];
 
     $result["14"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute14(732)",
+        "result" => execute14(732),
     ];
 
     $result["19"] = [
-        "code" => "",
-        "result" => "",
+        "code" => "execute19([3, 4, 5])",
+        "result" => execute19([3, 4, 5]),
     ];
     
     // Returning results
